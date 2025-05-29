@@ -26,7 +26,11 @@ retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose
                 get_crossref_articles(tmp[[2]])
             )
         if(!is.null(tmp)) tmp$issn <- issn
-        out[[i]] <- tmp[!duplicated(tmp$url),]
+        
+        if(is.null(tmp)) {
+            out[[i]] <- NULL
+            } else {
+            out[[i]] <- tmp[!duplicated(tmp$url),]
         }
 
     if(is.null(out)) return(NULL)
@@ -290,39 +294,3 @@ crossref_endpoint_polite_faster <- function(crawl_start_date, crawl_end_date) {
     }
     return(ifelse(res == 2, TRUE, FALSE))
     }
-
-
-
-# Open AI 
-call_openai_api <- function(system_prompt, user_prompt, model){
-    endpoint <- "https://api.openai.com/v1/chat/completions"
-    body <- list(
-        model = model,
-        messages = list(
-            list(role="system", content=system_prompt),
-            list(role="user", content=user_prompt)
-            )
-        )
-    body <- toJSON(body, auto_unbox=TRUE)
-    res <- POST(endpoint, 
-        body=body, 
-        encode='raw', 
-        content_type_json(), 
-        add_headers(Authorization = paste("Bearer", openai_apikey, sep = " ")))
-    
-    return(content(res))
-    }
-
-get_openai_response <- function(response){
-    return(response$choices[[1]]$message$content)
-}
-
-get_openai_finish_reason <- function(response){
-    return(response$choices[[1]]$finish_reason)
-}
-
-get_openai_usage <- function(response){
-    return(unlist(response$usage$total_tokens))
-}
-
-
