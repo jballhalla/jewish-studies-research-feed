@@ -37,7 +37,9 @@ if(is.null(out)) {
 # Cleanup data
 out$abstract <- strip_html(out$abstract)
 out$abstract <- gsub("^(Abstract|ABSTRACT) ", "", out$abstract)
+out$abstract <- gsub("[\u0000-\u001F\u007F-\u009F]", "", out$abstract, perl=TRUE)
 out$title <- strip_html(out$title)
+out$title <- gsub("[\u0000-\u001F\u007F-\u009F]", "", out$title, perl=TRUE)
 out$doi <- extract_doi_id(out$url)
 
 # Merge in journal information 
