@@ -25,14 +25,20 @@ out <- retrieve_crossref_issn_data(
 
 # Remove duplicates
 out <- out[!duplicated(out$url),] 
-# Remove past paers
+# Remove past papers
 out <- out[!(out$url %in% past_urls$url), ]
+
 if(is.null(out)) {
     json <- toJSON(list("update"=as.Date(now), "content"=list()), 
         pretty=TRUE, auto_unbox=TRUE)
     write(json, paste0("./output/", field, ".json"))
     quit(save="no")
     } 
+
+# Clean NUL characters BEFORE other processing
+out$abstract <- gsub("\u0000", "", out$abstract, fixed = TRUE)
+out$title <- gsub("\u0000", "", out$title, fixed = TRUE)
+out$authors <- gsub("\u0000", "", out$authors, fixed = TRUE)
 
 # Cleanup data
 out$abstract <- strip_html(out$abstract)
