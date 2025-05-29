@@ -203,14 +203,25 @@ get_crossref_articles <- function(items){
 }
 
 get_crossref_article_info <- function(item){
-
-    return((c(
-        title=get_crossref_title(item),
-        authors=get_crossref_authors(item),
-        created=get_crossref_date(item, "created"),
-        abstract=get_crossref_abstract(item), 
-        url = get_crossref_url(item)
-    )))
+    # Extract data first
+    title <- get_crossref_title(item)
+    authors <- get_crossref_authors(item)
+    created <- get_crossref_date(item, "created")
+    abstract <- get_crossref_abstract(item)
+    url <- get_crossref_url(item)
+    
+    # Clean NUL characters immediately
+    if(!is.na(title)) title <- gsub("\u0000", "", title, fixed = TRUE)
+    if(!is.na(authors)) authors <- gsub("\u0000", "", authors, fixed = TRUE)
+    if(!is.na(abstract)) abstract <- gsub("\u0000", "", abstract, fixed = TRUE)
+    
+    return(c(
+        title = title,
+        authors = authors,
+        created = created,
+        abstract = abstract, 
+        url = url
+    ))
 }
 
 get_crossref_abstract <- function(item){
