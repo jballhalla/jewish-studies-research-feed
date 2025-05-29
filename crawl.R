@@ -1,4 +1,4 @@
-field <- commandArgs(trailingOnly = TRUE)
+field <- "jewish_studies" # from commandArgs(trailingOnly = TRUE)
 
 library(httr)
 library(jsonlite)
@@ -45,21 +45,6 @@ out <- merge(out, journals, by="issn")
 
 # Apply standard filter flags 
 out <- add_standard_filter(out) 
-
-# Filter flags: Multidisciplinary journals 
-if(field %in% c("multidisciplinary", "environmental_and_climate_politics_studies") ){
-    out_lst <- split(out, out$filter_function) 
-    out_lst <- lapply(out_lst, dispatch_special_filter ) 
-    out <- do.call(rbind, out_lst)
-    out$filter <- apply(out, 1, function(x){
-        tryCatch(
-            {add_multidisciplinary_filter(x)
-            }, error = function(msg){
-                return(-1)
-            })
-        })
-    rownames(out) <- NULL
-    } 
 
 # Output JSON
 out_json <- render_json(out, date=as.Date(now)) 
