@@ -39,26 +39,6 @@ retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose
 # Filter 
 #########
 
-add_multidisciplinary_filter <- function(row){
-    row_nam <- names(row)
-        cat(row[row_nam=="url"], "\n")
-    row[row_nam=="filter"] <- as.integer(row[row_nam=="filter"])
-    if(row[row_nam=="filter"]!=0) return(row[row_nam=="filter"])
-    else{
-        res <- call_openai_api(
-            system_prompt=prompt_socsci_classifier, 
-            user_prompt=paste(
-                "Journal Name:", row[row_nam=="journal_full"], "\n",
-                "Title:", row[row_nam=="title"], "\n",
-                row[row_nam=="abstract"]
-            ),
-            model="gpt-4o-mini")
-        if( get_openai_finish_reason(res)!="stop" ) return(-1)
-        if( tolower(get_openai_response(res))=="no" ) return(2)
-        return(0)
-    }
-}
-
 dispatch_special_filter <- function(data){
     FUN <- unique(data$filter_function)
     if(FUN=="" | FUN=="none") return(data)
@@ -181,6 +161,9 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
     }
 
 get_crossref_articles <- function(items){
+    if(is.null(items) || is.null(items$message) || is.null(items$message$items) || length(items$message$items) == 0) {
+        return(NULL)
+    }
     ll <- lapply(items$message$items, get_crossref_article_info)
     ll <- do.call(rbind, lapply(ll, function(x) as.data.frame(t(x))))
     return(ll)
