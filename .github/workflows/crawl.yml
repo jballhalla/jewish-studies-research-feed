@@ -3,7 +3,7 @@ name: Crawl
 on: 
    workflow_dispatch:
    schedule:
-     - cron: "0 2 * * 5"
+     - cron: "0 12 * * 4" # Noon on Thurs for first test
 
 jobs:
   crawl:
