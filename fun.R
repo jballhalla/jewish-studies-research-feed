@@ -188,6 +188,11 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
 }
 
 get_crossref_articles <- function(items){
+    # Handle case where API returned error structure
+    if(is.null(items$message) || is.null(items$message$items) || length(items$message$items) == 0) {
+        return(NULL)
+    }
+    
     ll <- lapply(items$message$items, get_crossref_article_info)
     ll <- do.call(rbind, lapply(ll, function(x) as.data.frame(t(x))))
     return(ll)
