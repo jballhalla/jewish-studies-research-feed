@@ -26,11 +26,7 @@ retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose
                 get_crossref_articles(tmp[[2]])
             )
         if(!is.null(tmp)) tmp$issn <- issn
-        
-        if(is.null(tmp)) {
-            out[[i]] <- NULL
-            } else {
-            out[[i]] <- tmp[!duplicated(tmp$url),]
+        out[[i]] <- tmp[!duplicated(tmp$url),]
         }
 
     if(is.null(out)) return(NULL)
@@ -42,6 +38,26 @@ retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose
 
 # Filter 
 #########
+
+add_multidisciplinary_filter <- function(row){
+    row_nam <- names(row)
+        cat(row[row_nam=="url"], "\n")
+    row[row_nam=="filter"] <- as.integer(row[row_nam=="filter"])
+    if(row[row_nam=="filter"]!=0) return(row[row_nam=="filter"])
+    else{
+        res <- call_openai_api(
+            system_prompt=prompt_socsci_classifier, 
+            user_prompt=paste(
+                "Journal Name:", row[row_nam=="journal_full"], "\n",
+                "Title:", row[row_nam=="title"], "\n",
+                row[row_nam=="abstract"]
+            ),
+            model="gpt-4o-mini")
+        if( get_openai_finish_reason(res)!="stop" ) return(-1)
+        if( tolower(get_openai_response(res))=="no" ) return(2)
+        return(0)
+    }
+}
 
 dispatch_special_filter <- function(data){
     FUN <- unique(data$filter_function)
@@ -165,9 +181,6 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
     }
 
 get_crossref_articles <- function(items){
-    if(is.null(items) || is.null(items$message) || is.null(items$message$items) || length(items$message$items) == 0) {
-        return(NULL)
-    }
     ll <- lapply(items$message$items, get_crossref_article_info)
     ll <- do.call(rbind, lapply(ll, function(x) as.data.frame(t(x))))
     return(ll)
@@ -294,3 +307,38 @@ crossref_endpoint_polite_faster <- function(crawl_start_date, crawl_end_date) {
     }
     return(ifelse(res == 2, TRUE, FALSE))
     }
+
+
+
+# Open AI 
+call_openai_api <- function(system_prompt, user_prompt, model){
+    endpoint <- "https://api.openai.com/v1/chat/completions"
+    body <- list(
+        model = model,
+        messages = list(
+            list(role="system", content=system_prompt),
+            list(role="user", content=user_prompt)
+            )
+        )
+    body <- toJSON(body, auto_unbox=TRUE)
+    res <- POST(endpoint, 
+        body=body, 
+        encode='raw', 
+        content_type_json(), 
+        add_headers(Authorization = paste("Bearer", openai_apikey, sep = " ")))
+    
+    return(content(res))
+    }
+
+get_openai_response <- function(response){
+    return(response$choices[[1]]$message$content)
+}
+
+get_openai_finish_reason <- function(response){
+    return(response$choices[[1]]$finish_reason)
+}
+
+get_openai_usage <- function(response){
+    return(unlist(response$usage$total_tokens))
+}
+
