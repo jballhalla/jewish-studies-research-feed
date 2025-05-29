@@ -177,6 +177,12 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
         param$mailto <- crossref_email
     }
     res = RETRY("GET", url=endpoint, query=param, pause_base=5)
+
+    if (status_code(res) != 200) {
+        warning(paste("API request failed for", id, "with status:", status_code(res)))
+        return(list(message = list(items = list())))  # Return empty structure
+    }
+    
     return(content(res))
     }
 
