@@ -1,4 +1,4 @@
-name: Crawl
+name: Crawl Jewish Studies
 
 on: 
    workflow_dispatch:
@@ -28,11 +28,9 @@ jobs:
       - name: Create and populate credentials file with secrets
         working-directory: ./main_folder
         run: |
-          echo 'openai_apikey="'"$MAPPED_OPENAI_APIKEY"'"' >> credentials.R
           echo 'crossref_email="'"$MAPPED_CROSSREF_EMAIL"'"' >> credentials.R
         shell: bash
         env:
-          MAPPED_OPENAI_APIKEY : ${{ secrets.OPENAI_APIKEY }}
           MAPPED_CROSSREF_EMAIL : ${{ secrets.CROSSREF_EMAIL }}
 
       - name: Get data and produce JSON
