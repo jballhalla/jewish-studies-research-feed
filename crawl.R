@@ -35,11 +35,6 @@ if(is.null(out)) {
     quit(save="no")
     } 
 
-# Clean NUL characters BEFORE other processing
-out$abstract <- gsub("\u0000", "", out$abstract, fixed = TRUE)
-out$title <- gsub("\u0000", "", out$title, fixed = TRUE)
-out$authors <- gsub("\u0000", "", out$authors, fixed = TRUE)
-
 # Cleanup data
 out$abstract <- strip_html(out$abstract)
 out$abstract <- gsub("^(Abstract|ABSTRACT) ", "", out$abstract)
