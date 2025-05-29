@@ -2,7 +2,6 @@
 ########
 
 retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose=FALSE, polite_endpoint=TRUE){
-
     K <- length(issn_list)
     out <- list()
 
@@ -21,19 +20,24 @@ retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose
                 date_type=type, 
                 polite_endpoint=polite_endpoint)
         }
-        tmp <- rbind(
+        tmp_articles <- rbind(
                 get_crossref_articles(tmp[[1]]), 
                 get_crossref_articles(tmp[[2]])
             )
-        if(!is.null(tmp)) tmp$issn <- issn
-        out[[i]] <- tmp[!duplicated(tmp$url),]
+        if(!is.null(tmp_articles)) {
+            tmp_articles$issn <- issn
+            out[[i]] <- tmp_articles[!duplicated(tmp_articles$url),]
         }
+    }
 
-    if(is.null(out)) return(NULL)
+    # Filter out NULL entries
+    out <- out[!sapply(out, is.null)]
+    
+    if(length(out) == 0) return(NULL)
 
     out <- do.call(rbind, out)
     return(out)
-    }
+}
 
 
 # Filter 
