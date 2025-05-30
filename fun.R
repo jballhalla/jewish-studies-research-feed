@@ -189,24 +189,23 @@ render_json <- function(df, date) {
     
     # Debug: Final check
     debug_nul_characters(final_obj, "final_json_object")
-    
-    # Try JSON conversion with error handling
+
+    # In render_json function, replace the toJSON call with:
     tryCatch({
-        cat("Attempting JSON conversion...\n")
-        json_result <- toJSON(final_obj, pretty = TRUE, auto_unbox = TRUE)
-        cat("JSON conversion successful\n")
+        # Convert to JSON using base R to avoid jsonlite issues
+        json_result <- jsonlite::toJSON(final_obj, pretty = TRUE, auto_unbox = TRUE, null = "null")
+        # Final NUL strip on the JSON string itself
+        json_result <- gsub("\\x00", "", json_result)
+        json_result <- gsub("\u0000", "", json_result)
         return(json_result)
     }, error = function(e) {
-        cat("JSON conversion failed:", e$message, "\n")
-        
-        # Emergency fallback - create minimal JSON
-        emergency_json <- list(
+        # Serialize each piece individually to isolate the problem
+        safe_obj <- list(
             "update" = as.character(date),
-            "content" = list(),
-            "error" = "Character encoding issue detected"
+            "content" = list()
         )
-        return(toJSON(emergency_json, pretty = TRUE, auto_unbox = TRUE))
-    })
+        return(jsonlite::toJSON(safe_obj, pretty = TRUE, auto_unbox = TRUE))
+})
 }
 
 safe_write_json <- function(data, file_path) {
