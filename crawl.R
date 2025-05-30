@@ -51,7 +51,7 @@ out <- add_standard_filter(out)
 
 # Output JSON
 out_json <- render_json(out, date=as.Date(now)) 
-write(out_json, paste0("./output/", field, ".json"))
+safe_write_json(out_json, paste0("./output/", field, ".json"))
 
 # Update past urls
 write.table(out[,"url"], 
