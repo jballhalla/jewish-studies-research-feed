@@ -126,6 +126,21 @@ render_json <- function(df, date) {
     return(json)
 }
 
+safe_write_json <- function(data, file_path) {
+    tryCatch({
+        write(data, file_path)
+        return(TRUE)
+    }, error = function(e) {
+        warning(paste("Failed to write JSON:", e$message))
+        # Write emergency fallback
+        emergency_json <- toJSON(list("update" = Sys.Date(), "content" = list(), 
+                                    "error" = "Character encoding issue"), 
+                               pretty = TRUE, auto_unbox = TRUE)
+        write(emergency_json, file_path)
+        return(FALSE)
+    })
+}
+
 extract_doi_id <- function(url){
     return(gsub("http(|s)://dx.doi.org/", "", url))
     }
