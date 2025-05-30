@@ -1,5 +1,4 @@
-field <- commandArgs(trailingOnly = TRUE)
-
+field <- "jewish_studies"
 library(httr)
 library(jsonlite)
 
