@@ -115,5 +115,5 @@ write.table(out[,"url"],
 # Write journal short list
 journals_out <- unique(journals[,c("journal_full","journal_short")])
 journals_out <- journals_out[order(journals_out$journal_full),]
-journals_out <- toJSON(journals_out, pretty=TRUE, auto_unbox=TRUE) 
+journals_out <- gsub("\\x00", "", jsonlite::toJSON(journals_out, pretty=TRUE, auto_unbox=TRUE))
 write(journals_out, paste0("./output/", field, "_journals.json"))
