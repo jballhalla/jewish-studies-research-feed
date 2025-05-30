@@ -100,69 +100,112 @@ add_standard_filter <- function(data){
 # Helpers 
 ##########
 
+# Add this debug function to fun.R
+debug_nul_characters <- function(obj, name = "object") {
+    if (is.data.frame(obj)) {
+        for (col_name in names(obj)) {
+            col_data <- obj[[col_name]]
+            if (is.character(col_data)) {
+                nul_indices <- which(grepl("\u0000", col_data, fixed = TRUE))
+                if (length(nul_indices) > 0) {
+                    cat("Found NUL in", name, "column", col_name, "at rows:", nul_indices, "\n")
+                    cat("Sample problematic data:", substr(col_data[nul_indices[1]], 1, 100), "\n")
+                }
+            }
+        }
+    } else if (is.list(obj)) {
+        for (i in seq_along(obj)) {
+            debug_nul_characters(obj[[i]], paste0(name, "[[", i, "]]"))
+        }
+    } else if (is.character(obj)) {
+        nul_indices <- which(grepl("\u0000", obj, fixed = TRUE))
+        if (length(nul_indices) > 0) {
+            cat("Found NUL in", name, "at positions:", nul_indices, "\n")
+        }
+    }
+}
+
+# Replace the render_json function with this more robust version:
 render_json <- function(df, date) {
-    # More aggressive cleaning function
-    deep_clean_characters <- function(x) {
+    # Ultra-aggressive character cleaning
+    ultra_clean <- function(x) {
         if (is.null(x) || length(x) == 0) return(x)
         if (is.character(x)) {
-            # Remove NUL and all control characters more aggressively
-            x <- iconv(x, to = "UTF-8", sub = "")  # Remove invalid UTF-8
+            # Convert to raw bytes and back to remove any problematic characters
+            x <- iconv(x, from = "UTF-8", to = "UTF-8", sub = "")
+            # Remove ALL control characters including NUL
             x <- gsub("[\u0000-\u001F\u007F-\u009F]", "", x, perl = TRUE)
-            x <- gsub("\u0000", "", x, fixed = TRUE)  # Extra NUL removal
-            # Remove any remaining problematic characters
-            x <- gsub("[^\x20-\x7E\u00A0-\uFFFF]", "", x, perl = TRUE)
+            # Additional NUL removal with different approaches
+            x <- gsub("\0", "", x, fixed = TRUE)
+            x <- gsub("\\x00", "", x)
+            # Ensure only printable characters remain
+            x <- iconv(x, to = "ASCII//TRANSLIT", sub = "")
+            x <- iconv(x, from = "ASCII", to = "UTF-8", sub = "")
             return(x)
         }
         return(x)
     }
     
-    # Clean ALL character columns recursively
+    cat("Starting render_json with", nrow(df), "rows\n")
+    
+    # Debug: Check for NUL characters before processing
+    debug_nul_characters(df, "input_dataframe")
+    
+    # Apply ultra cleaning to all character columns
     char_cols <- sapply(df, is.character)
-    df[char_cols] <- lapply(df[char_cols], deep_clean_characters)
+    df[char_cols] <- lapply(df[char_cols], ultra_clean)
     
-    # Double-check: clean any remaining character data in the dataframe
-    df <- as.data.frame(lapply(df, function(col) {
-        if (is.character(col)) deep_clean_characters(col) else col
-    }), stringsAsFactors = FALSE)
+    # Debug: Check again after cleaning
+    debug_nul_characters(df, "cleaned_dataframe")
     
-    df <- split(df, df$journal_full)
+    # Split by journal
+    df_split <- split(df, df$journal_full)
     to_json <- list()
-    for(i in 1:length(df)){
-        articles <- df[[i]]
-        journal_full <- unique(articles$journal_full)
-        journal_short <- unique(articles$journal_short)
+    
+    for(i in 1:length(df_split)){
+        articles <- df_split[[i]]
+        journal_full <- ultra_clean(unique(articles$journal_full))
+        journal_short <- ultra_clean(unique(articles$journal_short))
         
-        # Clean the specific columns again before creating the list
+        # Select and clean specific columns
         articles <- articles[c("title", "authors", "abstract", "url", "doi", "filter")]
-        articles[] <- lapply(articles, deep_clean_characters)
+        articles[] <- lapply(articles, ultra_clean)
         
-        articles_hidden <- subset(articles, !(filter==0 | filter==-1) )
-        articles_hidden <- sort_by(articles_hidden, articles_hidden$filter) 
-        articles <- subset(articles, (filter==0 | filter==-1) )
+        # Debug: Check articles data
+        debug_nul_characters(articles, paste0("articles_", i))
+        
+        articles_hidden <- subset(articles, !(filter==0 | filter==-1))
+        articles_visible <- subset(articles, (filter==0 | filter==-1))
         
         to_json[[i]] <- list(
-            "journal_full" = deep_clean_characters(journal_full), 
-            "journal_short" = deep_clean_characters(journal_short),
-            "articles" = articles, 
-            "articles_hidden" = articles_hidden)
+            "journal_full" = journal_full, 
+            "journal_short" = journal_short,
+            "articles" = articles_visible, 
+            "articles_hidden" = articles_hidden
+        )
     }
     
-    to_json <- list("update" = date, "content" = to_json)
+    final_obj <- list("update" = as.character(date), "content" = to_json)
     
-    # Final safety check before JSON conversion
+    # Debug: Final check
+    debug_nul_characters(final_obj, "final_json_object")
+    
+    # Try JSON conversion with error handling
     tryCatch({
-        json <- toJSON(to_json, pretty = TRUE, auto_unbox = TRUE)
-        return(json)
+        cat("Attempting JSON conversion...\n")
+        json_result <- toJSON(final_obj, pretty = TRUE, auto_unbox = TRUE)
+        cat("JSON conversion successful\n")
+        return(json_result)
     }, error = function(e) {
-        # If JSON conversion still fails, apply even more aggressive cleaning
-        warning("JSON conversion failed, applying emergency cleaning")
-        to_json_clean <- rapply(to_json, function(x) {
-            if (is.character(x)) {
-                iconv(gsub("[\u0000-\u001F\u007F-\u009F]", "", x, perl = TRUE), 
-                      to = "UTF-8", sub = "")
-            } else x
-        }, how = "replace")
-        return(toJSON(to_json_clean, pretty = TRUE, auto_unbox = TRUE))
+        cat("JSON conversion failed:", e$message, "\n")
+        
+        # Emergency fallback - create minimal JSON
+        emergency_json <- list(
+            "update" = as.character(date),
+            "content" = list(),
+            "error" = "Character encoding issue detected"
+        )
+        return(toJSON(emergency_json, pretty = TRUE, auto_unbox = TRUE))
     })
 }
 
