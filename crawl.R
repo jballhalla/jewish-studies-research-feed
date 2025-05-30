@@ -75,6 +75,29 @@ out <- merge(out, journals, by="issn")
 # Apply standard filter flags 
 out <- add_standard_filter(out) 
 
+# Add this debug section right before the JSON writing:
+cat("=== DEBUGGING SECTION ===\n")
+cat("Data dimensions:", dim(out), "\n")
+cat("Columns:", names(out), "\n")
+
+# Save the data as RDS for inspection
+saveRDS(out, "debug_data.rds")
+cat("Debug data saved as debug_data.rds\n")
+
+# Check each column for NUL characters
+for(col_name in names(out)) {
+    if(is.character(out[[col_name]])) {
+        nul_count <- sum(grepl("\u0000", out[[col_name]], fixed = TRUE))
+        if(nul_count > 0) {
+            cat("Column", col_name, "has", nul_count, "entries with NUL characters\n")
+        }
+    }
+}
+
+# Try a minimal JSON first
+test_json <- toJSON(list("test" = "simple"), pretty = TRUE)
+cat("Simple JSON test successful\n")
+
 # Output JSON
 out_json <- render_json(out, date=as.Date(now)) 
 safe_write_json(out_json, paste0("./output/", field, ".json"))
@@ -94,5 +117,3 @@ journals_out <- unique(journals[,c("journal_full","journal_short")])
 journals_out <- journals_out[order(journals_out$journal_full),]
 journals_out <- toJSON(journals_out, pretty=TRUE, auto_unbox=TRUE) 
 write(journals_out, paste0("./output/", field, "_journals.json"))
-
-
