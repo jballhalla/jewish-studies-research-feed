@@ -18,7 +18,6 @@ jobs:
           packages: |
             any::httr 
             any::jsonlite
-            any::stringi
 
       - name: Check out repository
         uses: actions/checkout@v4
