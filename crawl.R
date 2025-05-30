@@ -28,6 +28,18 @@ out <- out[!duplicated(out$url),]
 # Remove past papers
 out <- out[!(out$url %in% past_urls$url), ]
 
+if(!is.null(out)) {
+    # Clean NUL characters from all character columns
+    char_cols <- sapply(out, is.character)
+    out[char_cols] <- lapply(out[char_cols], clean_nul_characters)
+    
+    # Original cleaning steps
+    out$abstract <- strip_html(out$abstract)
+    out$abstract <- gsub("^(Abstract|ABSTRACT) ", "", out$abstract)
+    out$title <- strip_html(out$title)
+    out$doi <- extract_doi_id(out$url)
+}
+
 if(is.null(out)) {
     json <- toJSON(list("update"=as.Date(now), "content"=list()), 
         pretty=TRUE, auto_unbox=TRUE)
