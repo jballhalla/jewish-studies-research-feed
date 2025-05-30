@@ -223,10 +223,11 @@ get_crossref_article_info <- function(item){
     abstract <- get_crossref_abstract(item)
     url <- get_crossref_url(item)
     
-    # Clean NUL characters immediately
-    if(!is.na(title)) title <- gsub("\u0000", "", title, fixed = TRUE)
-    if(!is.na(authors)) authors <- gsub("\u0000", "", authors, fixed = TRUE)
-    if(!is.na(abstract)) abstract <- gsub("\u0000", "", abstract, fixed = TRUE)
+    # Clean all control characters including NUL immediately
+    if(!is.na(title)) title <- gsub("[\u0000-\u001F\u007F-\u009F]", "", title, perl = TRUE)
+    if(!is.na(authors)) authors <- gsub("[\u0000-\u001F\u007F-\u009F]", "", authors, perl = TRUE)
+    if(!is.na(abstract)) abstract <- gsub("[\u0000-\u001F\u007F-\u009F]", "", abstract, perl = TRUE)
+    if(!is.na(url)) url <- gsub("[\u0000-\u001F\u007F-\u009F]", "", url, perl = TRUE)
     
     return(c(
         title = title,
