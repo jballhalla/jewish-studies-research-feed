@@ -100,8 +100,11 @@ add_standard_filter <- function(data){
 # Helpers 
 ##########
 
-render_json <- function(df,date){
-
+render_json <- function(df, date) {
+    # Clean all character columns of NUL characters before processing
+    char_cols <- sapply(df, is.character)
+    df[char_cols] <- lapply(df[char_cols], clean_nul_characters)
+    
     df <- split(df, df$journal_full)
     to_json <- list()
     for(i in 1:length(df)){
@@ -121,11 +124,21 @@ render_json <- function(df,date){
     to_json <- list("update"=date, "content"=to_json)
     json <- toJSON(to_json, pretty=TRUE, auto_unbox=TRUE) 
     return(json)
-    }
+}
 
 extract_doi_id <- function(url){
     return(gsub("http(|s)://dx.doi.org/", "", url))
     }
+
+clean_nul_characters <- function(x) {
+    if (is.null(x) || is.na(x)) return(x)
+    if (is.character(x)) {
+        # Remove NUL characters (\u0000) and other problematic control characters
+        x <- gsub("[\u0000-\u001F\u007F-\u009F]", "", x, perl = TRUE)
+        return(x)
+    }
+    return(x)
+}
 
 strip_html <- function(str) {
    if(is.null(str)) return(NA)
@@ -334,38 +347,3 @@ crossref_endpoint_polite_faster <- function(crawl_start_date, crawl_end_date) {
     }
     return(ifelse(res == 2, TRUE, FALSE))
     }
-
-
-
-# Open AI 
-call_openai_api <- function(system_prompt, user_prompt, model){
-    endpoint <- "https://api.openai.com/v1/chat/completions"
-    body <- list(
-        model = model,
-        messages = list(
-            list(role="system", content=system_prompt),
-            list(role="user", content=user_prompt)
-            )
-        )
-    body <- toJSON(body, auto_unbox=TRUE)
-    res <- POST(endpoint, 
-        body=body, 
-        encode='raw', 
-        content_type_json(), 
-        add_headers(Authorization = paste("Bearer", openai_apikey, sep = " ")))
-    
-    return(content(res))
-    }
-
-get_openai_response <- function(response){
-    return(response$choices[[1]]$message$content)
-}
-
-get_openai_finish_reason <- function(response){
-    return(response$choices[[1]]$finish_reason)
-}
-
-get_openai_usage <- function(response){
-    return(unlist(response$usage$total_tokens))
-}
-
