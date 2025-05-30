@@ -101,9 +101,29 @@ add_standard_filter <- function(data){
 ##########
 
 render_json <- function(df, date) {
-    # Clean all character columns of NUL characters before processing
+    # More aggressive cleaning function
+    deep_clean_characters <- function(x) {
+        if (is.null(x) || length(x) == 0) return(x)
+        if (is.character(x)) {
+            # Remove NUL and all control characters more aggressively
+            x <- iconv(x, to = "UTF-8", sub = "")  # Remove invalid UTF-8
+            x <- gsub("[\u0000-\u001F\u007F-\u009F]", "", x, perl = TRUE)
+            x <- gsub("\u0000", "", x, fixed = TRUE)  # Extra NUL removal
+            # Remove any remaining problematic characters
+            x <- gsub("[^\x20-\x7E\u00A0-\uFFFF]", "", x, perl = TRUE)
+            return(x)
+        }
+        return(x)
+    }
+    
+    # Clean ALL character columns recursively
     char_cols <- sapply(df, is.character)
-    df[char_cols] <- lapply(df[char_cols], clean_nul_characters)
+    df[char_cols] <- lapply(df[char_cols], deep_clean_characters)
+    
+    # Double-check: clean any remaining character data in the dataframe
+    df <- as.data.frame(lapply(df, function(col) {
+        if (is.character(col)) deep_clean_characters(col) else col
+    }), stringsAsFactors = FALSE)
     
     df <- split(df, df$journal_full)
     to_json <- list()
@@ -111,19 +131,39 @@ render_json <- function(df, date) {
         articles <- df[[i]]
         journal_full <- unique(articles$journal_full)
         journal_short <- unique(articles$journal_short)
+        
+        # Clean the specific columns again before creating the list
         articles <- articles[c("title", "authors", "abstract", "url", "doi", "filter")]
+        articles[] <- lapply(articles, deep_clean_characters)
+        
         articles_hidden <- subset(articles, !(filter==0 | filter==-1) )
         articles_hidden <- sort_by(articles_hidden, articles_hidden$filter) 
         articles <- subset(articles, (filter==0 | filter==-1) )
+        
         to_json[[i]] <- list(
-            "journal_full"=journal_full, 
-            "journal_short"=journal_short,
-            "articles"=articles, 
-            "articles_hidden"=articles_hidden)
+            "journal_full" = deep_clean_characters(journal_full), 
+            "journal_short" = deep_clean_characters(journal_short),
+            "articles" = articles, 
+            "articles_hidden" = articles_hidden)
     }
-    to_json <- list("update"=date, "content"=to_json)
-    json <- toJSON(to_json, pretty=TRUE, auto_unbox=TRUE) 
-    return(json)
+    
+    to_json <- list("update" = date, "content" = to_json)
+    
+    # Final safety check before JSON conversion
+    tryCatch({
+        json <- toJSON(to_json, pretty = TRUE, auto_unbox = TRUE)
+        return(json)
+    }, error = function(e) {
+        # If JSON conversion still fails, apply even more aggressive cleaning
+        warning("JSON conversion failed, applying emergency cleaning")
+        to_json_clean <- rapply(to_json, function(x) {
+            if (is.character(x)) {
+                iconv(gsub("[\u0000-\u001F\u007F-\u009F]", "", x, perl = TRUE), 
+                      to = "UTF-8", sub = "")
+            } else x
+        }, how = "replace")
+        return(toJSON(to_json_clean, pretty = TRUE, auto_unbox = TRUE))
+    })
 }
 
 safe_write_json <- function(data, file_path) {
