@@ -29,11 +29,7 @@ out <- out[!duplicated(out$url),]
 out <- out[!(out$url %in% past_urls$url), ]
 
 if(!is.null(out)) {
-    # Clean NUL characters from all character columns
-    char_cols <- sapply(out, is.character)
-    out[char_cols] <- lapply(out[char_cols], clean_nul_characters)
-    
-    # Original cleaning steps
+    # Only basic HTML cleaning here - character cleaning happens in render_json
     out$abstract <- strip_html(out$abstract)
     out$abstract <- gsub("^(Abstract|ABSTRACT) ", "", out$abstract)
     out$title <- strip_html(out$title)
@@ -46,14 +42,6 @@ if(is.null(out)) {
     write(json, paste0("./output/", field, ".json"))
     quit(save="no")
     } 
-
-# Cleanup data
-out$abstract <- strip_html(out$abstract)
-out$abstract <- gsub("^(Abstract|ABSTRACT) ", "", out$abstract)
-out$abstract <- gsub("[\u0000-\u001F\u007F-\u009F]", "", out$abstract, perl=TRUE)
-out$title <- strip_html(out$title)
-out$title <- gsub("[\u0000-\u001F\u007F-\u009F]", "", out$title, perl=TRUE)
-out$doi <- extract_doi_id(out$url)
 
 # Merge in journal information 
 out <- merge(out, journals, by="issn")
