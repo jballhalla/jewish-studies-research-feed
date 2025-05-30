@@ -302,7 +302,7 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
     # Clean the raw response before JSON parsing
     raw_content <- content(res, "text", encoding = "UTF-8")
     # Remove NUL and other control characters from the raw JSON string
-    clean_content <- raw_content
+    clean_content <- stringi::stri_replace_all_regex(raw_content, "[\\p{C}]", "", vectorize_all = FALSE)
     clean_content <- iconv(clean_content, from = "UTF-8", to = "UTF-8", sub = "")
     clean_content <- gsub("[\u0000-\u001F\u007F-\u009F]", "", raw_content, perl = TRUE)
     clean_content <- gsub("\\x00", "", clean_content, fixed = TRUE)
