@@ -63,6 +63,7 @@ if(field %in% c("multidisciplinary", "environmental_and_climate_politics_studies
 # Output JSON
 out_json <- render_json(out, date=as.Date(now)) 
 write(out_json, paste0("./output/", field, ".json"))
+write(out_json, paste0("./docs/output/", field, ".json"))
 
 # Update past urls
 write.table(out[,"url"], 
