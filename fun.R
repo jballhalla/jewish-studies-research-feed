@@ -299,7 +299,13 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
         return(list(message = list(items = list())))  # Return empty structure that matches expected format
     }
     
-    return(content(res))
+    # Clean the raw response before JSON parsing
+    raw_content <- content(res, "text", encoding = "UTF-8")
+    # Remove NUL and other control characters from the raw JSON string
+    clean_content <- gsub("[\u0000-\u001F\u007F-\u009F]", "", raw_content, perl = TRUE)
+    
+    # Parse the cleaned JSON manually
+    return(jsonlite::fromJSON(clean_content))
 }
 
 get_crossref_articles <- function(items){
