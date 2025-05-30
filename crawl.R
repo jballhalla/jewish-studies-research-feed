@@ -1,5 +1,9 @@
 field <- "jewish_studies" # from commandArgs(trailingOnly = TRUE)
 
+if (!requireNamespace("stringi", quietly = TRUE)) {
+    install.packages("stringi", repos = "http://cran.us.r-project.org")
+    }
+library(stringi)
 library(httr)
 library(jsonlite)
 
