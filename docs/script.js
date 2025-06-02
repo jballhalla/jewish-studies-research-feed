@@ -19,20 +19,31 @@ async function loadArticles() {
 
       const articleTitle = document.createElement('div');
       articleTitle.className = 'article-title';
-      articleTitle.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a>`;
+
+      const linkWrapper = document.createElement('span');
+      linkWrapper.className = 'article-link';
+
+      const link = document.createElement('a');
+      link.href = article.url;
+      link.target = '_blank';
+      link.textContent = article.title;
+
+      linkWrapper.appendChild(link);
+
+      if (article.abstract) {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'abstract-tooltip';
+        tooltip.textContent = article.abstract;
+        linkWrapper.appendChild(tooltip);
+      }
+
+      articleTitle.appendChild(linkWrapper);
       articleDiv.appendChild(articleTitle);
 
       const authors = document.createElement('div');
       authors.className = 'article-authors';
       authors.textContent = article.authors;
       articleDiv.appendChild(authors);
-
-      if (article.abstract) {
-        const abstract = document.createElement('div');
-        abstract.className = 'article-abstract';
-        abstract.textContent = article.abstract;
-        articleDiv.appendChild(abstract);
-      }
 
       journalDiv.appendChild(articleDiv);
     });
