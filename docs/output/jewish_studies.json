@@ -1,87 +1,70 @@
 {
-  "update": "2025-05-30",
+  "update": "2025-06-06",
   "content": [
     {
       "journal_full": "Contemporary Jewry",
       "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Adrián Krupnik: Between Two Homelands: Argentine Migration to and from Israel",
-          "authors": "Perla Aizencang-Kane",
-          "url": "https://doi.org/10.1007/s12397-025-09645-2",
-          "doi": "https://doi.org/10.1007/s12397-025-09645-2",
+          "title": "Books Received, Volume 45 (2)",
+          "url": "https://doi.org/10.1007/s12397-025-09649-y",
+          "doi": "https://doi.org/10.1007/s12397-025-09649-y",
+          "filter": 0
+        },
+        {
+          "title": "Aharon Kampinsky, Rabbinism and Politics in Religious Zionism",
+          "authors": "Shlomo Fischer",
+          "url": "https://doi.org/10.1007/s12397-025-09647-0",
+          "doi": "https://doi.org/10.1007/s12397-025-09647-0",
+          "filter": 0
+        },
+        {
+          "title": "Andrew I. Port: Never Again: Germans and Genocide after the Holocaust",
+          "authors": "Phil Leask",
+          "url": "https://doi.org/10.1007/s12397-025-09654-1",
+          "doi": "https://doi.org/10.1007/s12397-025-09654-1",
+          "filter": 0
+        },
+        {
+          "title": "Hannah Pollin-Galay, Occupied Words: What the Holocaust Did to Yiddish",
+          "authors": "Rebecca Rivke Margolis",
+          "url": "https://doi.org/10.1007/s12397-025-09655-0",
+          "doi": "https://doi.org/10.1007/s12397-025-09655-0",
+          "filter": 0
+        },
+        {
+          "title": "Sergio DellaPergola: US Jews, Reflections on Identity and Demography, Studies of Jews in Society, Volume 7",
+          "authors": "Ira M. Sheskin",
+          "url": "https://doi.org/10.1007/s12397-025-09646-1",
+          "doi": "https://doi.org/10.1007/s12397-025-09646-1",
+          "filter": 0
+        },
+        {
+          "title": "Research Updates",
+          "authors": "Ira M. Sheskin",
+          "url": "https://doi.org/10.1007/s12397-025-09650-5",
+          "doi": "https://doi.org/10.1007/s12397-025-09650-5",
+          "filter": 0
+        },
+        {
+          "title": "Jonathan Karp, Ed.: Beyond Whiteness: Revisiting Jews in Ethnic America",
+          "authors": "Morton Weinfeld",
+          "url": "https://doi.org/10.1007/s12397-025-09652-3",
+          "doi": "https://doi.org/10.1007/s12397-025-09652-3",
           "filter": 0
         }
       ],
       "articles_hidden": []
-    },
-    {
-      "journal_full": "European Journal of Jewish Studies",
-      "journal_short": "Eur J Jewish Stud",
-      "articles": [
-        {
-          "title": "‘A Taste of the World to Come’",
-          "authors": "Lindsey Taylor-Guthartz",
-          "abstract": "This paper explores the use of utopian language by interviewees talking about their experiences at Limmud Festival, an annual residential conference focused on a wide variety of Jewish learning, held over Christmas, and run by volunteers. Such language is closely linked to Limmud’s role as an experimental, cross-denominational ‘counter-community’ that plays a central role in the Jewish identity and practice of many participants, serving as a laboratory, showcase, and refuge.",
-          "url": "https://doi.org/10.1163/1872471x-bja10096",
-          "doi": "https://doi.org/10.1163/1872471x-bja10096",
-          "filter": 0
-        },
-        {
-          "title": "The Writings of Rabbi Menaḥem Azariah da Fano and Their Interpretation in Seventeenth-Century Ashkenazic-Polish Milieu",
-          "authors": "Eliezer Baumgarten",
-          "abstract": "Rabbi Menaḥem Azariah da Fano (1548–1620) was one of the most important Italian rabbis during the second half of the sixteenth century and the early seventeenth century. Most of Menaḥem’s writings were compiled in his “treatises” that were primarily published in two volumes: Asarah Maʾamarot and Amarot Ṭehorot . This article addresses the characterization of the genre of these treatises and attempts to understand their popularity in the seventeenth century Ashkenazic milieu. The treatises were printed and commentated on throughout this period almost exclusively in this region. The article shows how Kabbalists in Ashkenaz interpreted Menaḥem’s writings and how they became the foundation for kabbalistic teachings. Kabbalists such as Rabbi Yeshayahu Horowitz and Rabbi Nathan Nata Spira of Kraków relate to Menaḥem as the disseminator of the Safedian kabbalistic tradition to Europe. At the same time, Kabbalists wrote commentaries on his writings, commentaries that also presume to constitute an introduction to the Safedian Kabbalah in general and to Lurianic Kabbalah in particular. My claim in the article is that Menaḥem’s homiletical style of writing in these treatises plays a central role in this process. Menaḥem’s writings were identified by the Polish Kabbalists as part of the accepted literary genre in the Polish region, an approach that contributed to them becoming canonic compositions in the study of Kabbalah.",
-          "url": "https://doi.org/10.1163/1872471x-bja10098",
-          "doi": "https://doi.org/10.1163/1872471x-bja10098",
-          "filter": 0
-        }
-      ],
-      "articles_hidden": [
-        {
-          "title": "Front matter",
-          "url": "https://doi.org/10.1163/1872471x-01901000",
-          "doi": "https://doi.org/10.1163/1872471x-01901000",
-          "filter": 1
-        }
-      ]
     },
     {
       "journal_full": "Jewish Culture and History",
       "journal_short": "Jewish Cult Hist",
       "articles": [
         {
-          "title": "Jewish cattle traders in the German Countryside, 1919-1939: Economic trust and antisemitic violence",
-          "authors": "Michael Berkowitz",
-          "url": "https://doi.org/10.1080/1462169x.2025.2503090",
-          "doi": "https://doi.org/10.1080/1462169x.2025.2503090",
-          "filter": 0
-        }
-      ],
-      "articles_hidden": []
-    },
-    {
-      "journal_full": "Jewish History",
-      "journal_short": "Jewish Hist",
-      "articles": [
-        {
-          "title": "Unwanted Children and Invented Families in Early Modern Jewish Communities",
-          "authors": "Jordan Katz, Elisheva Carlebach",
-          "url": "https://doi.org/10.1007/s10835-025-09471-x",
-          "doi": "https://doi.org/10.1007/s10835-025-09471-x",
-          "filter": 0
-        }
-      ],
-      "articles_hidden": []
-    },
-    {
-      "journal_full": "Journal of Jewish Education",
-      "journal_short": "J Jewish Ed",
-      "articles": [
-        {
-          "title": "Kibbutz in the American Jewish Imagination: The Research of Bettelheim and Kohlberg",
-          "authors": "Joseph Reimer",
-          "url": "https://doi.org/10.1080/15244113.2025.2499556",
-          "doi": "https://doi.org/10.1080/15244113.2025.2499556",
+          "title": "Pharmacology of technics, différance and memory: the narratives of the rocket in Moonglow",
+          "authors": "Tian Zhang, Laigen Song",
+          "url": "https://doi.org/10.1080/1462169x.2025.2511397",
+          "doi": "https://doi.org/10.1080/1462169x.2025.2511397",
           "filter": 0
         }
       ],
@@ -92,17 +75,59 @@
       "journal_short": "J Mod Jewish Stud",
       "articles": [
         {
-          "title": "Between national identity and active citizenship: Mamlakhtiyut , republican education and the Israeli Government Yearbook",
-          "authors": "Adi Sherzer",
-          "url": "https://doi.org/10.1080/14725886.2025.2510619",
-          "doi": "https://doi.org/10.1080/14725886.2025.2510619",
+          "title": "Ethnic boundary work - amending the grandchild clause of the Law of Return in Israel",
+          "authors": "Ben Herzog",
+          "url": "https://doi.org/10.1080/14725886.2025.2511165",
+          "doi": "https://doi.org/10.1080/14725886.2025.2511165",
           "filter": 0
         },
         {
-          "title": "The inheritance register of a Jewish financier in eighteenth-century Istanbul: credit, jewels, and death rites",
-          "authors": "Irena Fliter, Yaron Ben-Naeh",
-          "url": "https://doi.org/10.1080/14725886.2025.2500004",
-          "doi": "https://doi.org/10.1080/14725886.2025.2500004",
+          "title": "Kabbalah and literature",
+          "authors": "Michael Hoberman",
+          "url": "https://doi.org/10.1080/14725886.2025.2512191",
+          "doi": "https://doi.org/10.1080/14725886.2025.2512191",
+          "filter": 0
+        },
+        {
+          "title": "Shaping the Jewish Enlightenment: Solomon Dubno (1738–1813), an Eastern European Maskil",
+          "authors": "Anna Zabraniak",
+          "url": "https://doi.org/10.1080/14725886.2025.2512198",
+          "doi": "https://doi.org/10.1080/14725886.2025.2512198",
+          "filter": 0
+        },
+        {
+          "title": "Sacred Places Tell Tales: Jewish Life and Heritage in Modern Cairo",
+          "authors": "Eliza Helmers",
+          "url": "https://doi.org/10.1080/14725886.2025.2512193",
+          "doi": "https://doi.org/10.1080/14725886.2025.2512193",
+          "filter": 0
+        },
+        {
+          "title": "Queer Judaism: LGBT activism and the remaking of Jewish orthodoxy in Israel",
+          "authors": "Mie Astrup Jensen",
+          "url": "https://doi.org/10.1080/14725886.2025.2512194",
+          "doi": "https://doi.org/10.1080/14725886.2025.2512194",
+          "filter": 0
+        },
+        {
+          "title": "Lessons of history. The Holocaust and Soviet terror as borderline events",
+          "authors": "Paula Chan",
+          "url": "https://doi.org/10.1080/14725886.2025.2512199",
+          "doi": "https://doi.org/10.1080/14725886.2025.2512199",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Modern Judaism",
+      "journal_short": "Mod Judaism",
+      "articles": [
+        {
+          "title": "Eugene Korn, Ethics of Our Fighters—A Jewish View on War and Morality",
+          "authors": "Eugene Korn",
+          "url": "https://doi.org/10.1093/mj/kjaf008",
+          "doi": "https://doi.org/10.1093/mj/kjaf008",
           "filter": 0
         }
       ],
