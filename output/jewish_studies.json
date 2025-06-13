@@ -1,70 +1,100 @@
 {
-  "update": "2025-06-06",
+  "update": "2025-06-13",
   "content": [
     {
       "journal_full": "Contemporary Jewry",
       "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Books Received, Volume 45 (2)",
-          "url": "https://doi.org/10.1007/s12397-025-09649-y",
-          "doi": "https://doi.org/10.1007/s12397-025-09649-y",
-          "filter": 0
-        },
-        {
-          "title": "Aharon Kampinsky, Rabbinism and Politics in Religious Zionism",
-          "authors": "Shlomo Fischer",
-          "url": "https://doi.org/10.1007/s12397-025-09647-0",
-          "doi": "https://doi.org/10.1007/s12397-025-09647-0",
-          "filter": 0
-        },
-        {
-          "title": "Andrew I. Port: Never Again: Germans and Genocide after the Holocaust",
-          "authors": "Phil Leask",
-          "url": "https://doi.org/10.1007/s12397-025-09654-1",
-          "doi": "https://doi.org/10.1007/s12397-025-09654-1",
-          "filter": 0
-        },
-        {
-          "title": "Hannah Pollin-Galay, Occupied Words: What the Holocaust Did to Yiddish",
-          "authors": "Rebecca Rivke Margolis",
-          "url": "https://doi.org/10.1007/s12397-025-09655-0",
-          "doi": "https://doi.org/10.1007/s12397-025-09655-0",
-          "filter": 0
-        },
-        {
-          "title": "Sergio DellaPergola: US Jews, Reflections on Identity and Demography, Studies of Jews in Society, Volume 7",
-          "authors": "Ira M. Sheskin",
-          "url": "https://doi.org/10.1007/s12397-025-09646-1",
-          "doi": "https://doi.org/10.1007/s12397-025-09646-1",
-          "filter": 0
-        },
-        {
-          "title": "Research Updates",
-          "authors": "Ira M. Sheskin",
-          "url": "https://doi.org/10.1007/s12397-025-09650-5",
-          "doi": "https://doi.org/10.1007/s12397-025-09650-5",
-          "filter": 0
-        },
-        {
-          "title": "Jonathan Karp, Ed.: Beyond Whiteness: Revisiting Jews in Ethnic America",
-          "authors": "Morton Weinfeld",
-          "url": "https://doi.org/10.1007/s12397-025-09652-3",
-          "doi": "https://doi.org/10.1007/s12397-025-09652-3",
+          "title": "Sarah M. Ross: The Moralization of Jewish Heritage in Germany: Sustaining Jewish Life in the Twenty-First Century",
+          "authors": "Dani Kranz",
+          "url": "https://doi.org/10.1007/s12397-025-09648-z",
+          "doi": "https://doi.org/10.1007/s12397-025-09648-z",
           "filter": 0
         }
       ],
       "articles_hidden": []
     },
     {
-      "journal_full": "Jewish Culture and History",
-      "journal_short": "Jewish Cult Hist",
+      "journal_full": "Israel Studies",
+      "journal_short": "Israel Stud",
       "articles": [
         {
-          "title": "Pharmacology of technics, différance and memory: the narratives of the rocket in Moonglow",
-          "authors": "Tian Zhang, Laigen Song",
-          "url": "https://doi.org/10.1080/1462169x.2025.2511397",
-          "doi": "https://doi.org/10.1080/1462169x.2025.2511397",
+          "title": "Religious Occupation, Israel 2020–2021: Orthodox Prayer Solutions during the COVID-19 Pandemic and the Religious–Secular Dispute Over Public Space",
+          "authors": "Amira Ehrlich",
+          "abstract": "ABSTRACT: This article examines the adaptation of Orthodox prayer practices in Israel to the pandemic restrictions, focusing on the resulting \"religious occupation\" of public spaces and the intensification of the religious-secular conflict. A mixed-methods approach that incorporates media analysis, surveys, and interviews is used to analyze creative solutions that emerged during the pandemic, such as outdoor prayer gatherings, which at the same time exacerbated existing secular-religious tensions. The research explores the diverse responses across different Jewish denominations, highlighting both the innovative capacity of Orthodox practices and the ongoing struggle for control over public space. The study further examines the sonic dimension of these adaptations, exploring the potential for prayer to be perceived as disruptive \"noise,\" and links this perception to historical anti-Semitic tropes. The analysis concludes by considering the long-term impact of these pandemic-era shifts on the relationship between religious observance, public space, and the broader religious-secular dynamics in Israel.",
+          "url": "https://doi.org/10.2979/is.00040",
+          "doi": "https://doi.org/10.2979/is.00040",
+          "filter": 0
+        },
+        {
+          "title": "Cutting through the Hype: Understanding the Economic Potential of Saudi Arabia-Israel Diplomatic Relations",
+          "authors": "Yossi Mann, Gedaliah Afterman, Arnon Bersson",
+          "abstract": "ABSTRACT: This article will assess the extent of future trade relations between Israel and Saudi Arabia after normalization, and attempt to identify key sectors likely to benefit from the diplomatic shift. Using a robust methodology, we aim to project potential trade volumes between the two countries and discuss the challenges inherent to the new economic landscape. The core of this analysis uses 2020 trade figures, a pivotal year marked by the signing of the \"Abraham Accords\", to project future trends and estimate potential trade figures between KSA and Israel in the coming years. The strength of our research lies not in its precise trade volume calculations but in the highlighted sectors poised for growth and an understanding of factors that influence economic cooperation. Initially focused on Saudi Arabia—the more sought-after party in this context—the article details both the current measures taken to align KSA politically and diplomatically with Israel and previous steps taken to reach a peace agreement. We then discuss relevant regional and geopolitical developments. Moving on to our economic analysis, we highlight factors that could shape or alter the scope of transactions between the two countries. Finally, we introduce our method for evaluating the economic potential between Saudi Arabia and Israel, by comparing it with World Trade Organization data from various countries already trading with Saudi Arabia in similar fields.",
+          "url": "https://doi.org/10.2979/is.00036",
+          "doi": "https://doi.org/10.2979/is.00036",
+          "filter": 0
+        },
+        {
+          "title": "The Past Versus an Unknown Future: On Intergenerational Transmission Between Mothers and Daughters in Druze Art",
+          "authors": "Rinat Podissuk Reisner",
+          "abstract": "ABSTRACT: In recent decades, there has been a proliferation of talented and innovative women artists from the Arab sector in Israel, and particularly the Druze community. Their work allows them to be heard both as women in the Israeli art scene and as members of a minority group. It engages with social and cultural conflicts, while presenting critical perspectives on the patriarchal Arab society in which they live and on the dominant Jewish majority. They explore the intersection between Western and Oriental cultures and between patriarchal and pluralistic societies, attempting to create a new language that reflects their experiences as women navigating a \"matrix of domination\" while asserting their identities as individual artists. Despite the significant presence of Druze artists in the local art scene and their vital role as women in a changing society, there is a scarcity of scholarly texts addressing their contribution, with most discussions relegated to exhibition catalogs.",
+          "url": "https://doi.org/10.2979/is.00039",
+          "doi": "https://doi.org/10.2979/is.00039",
+          "filter": 0
+        },
+        {
+          "title": "Much Ado about Something: The Tiran and Sanafir Islands in International, Regional and Domestic Politics (1841–2023)",
+          "authors": "Elie Podeh",
+          "abstract": "ABSTRACT: The Tiran and Sanafir are two small arid and uninhabited islands at the mouth of the Gulf of 'Aqaba, close to the Egyptian and Saudi shores. Their importance derives from their strategic location at the entrance to the Gulf of Aqaba and the maritime route to Jordan's port Aqaba and Israel's port Eilat. Since the 19th century, they have played an important role in international, regional and domestic politics, with the involvement of numerous actors: the Ottoman Empire, Britain, Italy, the United States, the kingdom of Hijaz, Egypt, Saudi Arabia, Jordan, Israel and the United Nations. The aim of this article is to explore the micro-history of the Tiran and Sanafir islands, as well as the Tiran Straits, as a center of power politics. It would show that what started as an international dispute between Britain and the Ottoman Empire, turned into a regional conflict within the Arab-Israeli conflict, and finally ended as a heated issue in Egyptian domestic politics, affecting also Egyptian-Saudi relations. In 2023, with the return of the islands to their original owner—Saudi Arabia—a two centuries long conflict came to an end.",
+          "url": "https://doi.org/10.2979/is.00033",
+          "doi": "https://doi.org/10.2979/is.00033",
+          "filter": 0
+        },
+        {
+          "title": "Domesticated Wilderness: On the Poetics of Impact in Avner Pinchover's Works",
+          "authors": "Diego Rotman",
+          "abstract": "ABSTRACT: This article explores the work of Israeli artist Avner Pinchover, focusing on his engagement with violence as both a performative act and an aesthetic strategy. Incorporating video and still image documentation to challenge the very cultural frameworks that embrace him, Pinchover's controlled yet unpredictable interventions—ranging from sculptural destruction to performative gestures—blur the lines between art and vandalism, iconoclasm and institutional critique and resonate beyond the art scene to reflect broader socio-political conflicts, particularly within the Israeli-Palestinian context. By exposing the \"elastic\" boundaries of institutionalized art through transgressive yet aestheticized acts, Pinchover's performative violence compels us to confront a deep-seated fascination with aggression controlled and mediated by cultural structures.",
+          "url": "https://doi.org/10.2979/is.00037",
+          "doi": "https://doi.org/10.2979/is.00037",
+          "filter": 0
+        },
+        {
+          "title": "Criminal Prohibitions of Land Sales to Israelis in the Palestinian Authority",
+          "authors": "Haim Sandberg",
+          "abstract": "ABSTRACT: This article elucidates the Palestinian Authority's (PA) criminal prohibition on the sale of land to Israelis and Jews and its application during the presidency of Mahmoud Abbas (Abu Mazen). The study of PA legislation, case law, public statements by prosecution authorities, and media coverage in PA-controlled areas reveals diverse normative foundations behind the sentences of five years to life imposed by the PA Attorney General on numerous defendants. While suspects of attempting or completing the sale of land to Jews risk grave bodily harm and mortal danger, the death penalty is not specified in PA legislation and has rarely been imposed (but never enforced). Such sales, even when they take place in Jerusalem or involve non-Jewish buyers, are deemed treasonous since they serve the Israeli settlement enterprise and weaken PA policy positions. Criminal proceedings in these cases impinge on the property rights and personal freedoms of vendors and constitute discrimination based on nationality and religion. The PA land-sale prohibition resembles restrictions from the British Mandate era, and both reflect the historical contest over the political status of the Land of Israel.",
+          "url": "https://doi.org/10.2979/is.00035",
+          "doi": "https://doi.org/10.2979/is.00035",
+          "filter": 0
+        },
+        {
+          "title": "An Airport, a Valley—and the Consequences of Chronic Indecision",
+          "authors": "Alon Tal",
+          "abstract": "ABSTRACT: A proposal to build a major civilian airport in the Jezreel Valley has been one of Israel's longest and most acrimonious environmental controversies. The decision about where to site the country's second international airport has been plagued by special interests and conflicting values. The anticipated environmental and health impacts caused by a civilian airport on life in the Jezreel Valley are described, along with the heated debate between the local residents and environmentalists on the one hand and Israel's powerful military establishment on the other. The conflict highlights profound changes in Israeli society and the ecological challenges it faces as it seeks to preserve the country's historic and scenic landscapes in an increasingly crowded reality. This case study concludes that locating a new airport on an artificial island in the Mediterranean constitutes the optimal solution for resolving Israel's longstanding air traffic conundrum.",
+          "url": "https://doi.org/10.2979/is.00034",
+          "doi": "https://doi.org/10.2979/is.00034",
+          "filter": 0
+        },
+        {
+          "title": "Shifting Landscapes, Changing Perspectives: The Founding of Kibbutz Lochamei HaGeta'ot",
+          "authors": "Sharon Geva",
+          "abstract": "ABSTRACT: Since its establishment, Kibbutz Lochamei HaGeta'ot has served as a living memorial to the Holocaust. This is reflected not only in its name, but also in the timing of its foundation (which coincided with the anniversary of the Warsaw Ghetto uprising) and the establishment of the first Holocaust museum (the Ghetto Fighters' House) on the kibbutz. This article focuses on the early phase of the kibbutz's history, from September 1948 to April 1949, which predates its official establishment. During this period, the kibbutz relocated from the Jezreel Valley, where it was located on land that had belonged to the Templer colony of Waldheim to its current location in the Western Galilee on the site of the abandoned Arab village of al-Sumayriyya. The article traces the journey of the founders across these two locations, examines their shifting perspectives both at the time and in retrospect, and demonstrates how these evolving views reflect broader attitudes within the kibbutz regarding Israel-Germany relations and the Palestinian tragedy of 1948.",
+          "url": "https://doi.org/10.2979/is.00038",
+          "doi": "https://doi.org/10.2979/is.00038",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Journal of Jewish Education",
+      "journal_short": "J Jewish Ed",
+      "articles": [
+        {
+          "title": "Throwing the Talmud Across the Room: Emotions and the Cultivation of Subjectivity in Talmud Study",
+          "authors": "Jane Kanarek",
+          "url": "https://doi.org/10.1080/15244113.2025.2508182",
+          "doi": "https://doi.org/10.1080/15244113.2025.2508182",
           "filter": 0
         }
       ],
@@ -75,45 +105,10 @@
       "journal_short": "J Mod Jewish Stud",
       "articles": [
         {
-          "title": "Ethnic boundary work - amending the grandchild clause of the Law of Return in Israel",
-          "authors": "Ben Herzog",
-          "url": "https://doi.org/10.1080/14725886.2025.2511165",
-          "doi": "https://doi.org/10.1080/14725886.2025.2511165",
-          "filter": 0
-        },
-        {
-          "title": "Kabbalah and literature",
-          "authors": "Michael Hoberman",
-          "url": "https://doi.org/10.1080/14725886.2025.2512191",
-          "doi": "https://doi.org/10.1080/14725886.2025.2512191",
-          "filter": 0
-        },
-        {
-          "title": "Shaping the Jewish Enlightenment: Solomon Dubno (1738–1813), an Eastern European Maskil",
-          "authors": "Anna Zabraniak",
-          "url": "https://doi.org/10.1080/14725886.2025.2512198",
-          "doi": "https://doi.org/10.1080/14725886.2025.2512198",
-          "filter": 0
-        },
-        {
-          "title": "Sacred Places Tell Tales: Jewish Life and Heritage in Modern Cairo",
-          "authors": "Eliza Helmers",
-          "url": "https://doi.org/10.1080/14725886.2025.2512193",
-          "doi": "https://doi.org/10.1080/14725886.2025.2512193",
-          "filter": 0
-        },
-        {
-          "title": "Queer Judaism: LGBT activism and the remaking of Jewish orthodoxy in Israel",
-          "authors": "Mie Astrup Jensen",
-          "url": "https://doi.org/10.1080/14725886.2025.2512194",
-          "doi": "https://doi.org/10.1080/14725886.2025.2512194",
-          "filter": 0
-        },
-        {
-          "title": "Lessons of history. The Holocaust and Soviet terror as borderline events",
-          "authors": "Paula Chan",
-          "url": "https://doi.org/10.1080/14725886.2025.2512199",
-          "doi": "https://doi.org/10.1080/14725886.2025.2512199",
+          "title": "Translating the Jewish Freud. Psychoanalysis in Hebrew and Yiddish",
+          "authors": "Elisabeth Punzi",
+          "url": "https://doi.org/10.1080/14725886.2025.2512201",
+          "doi": "https://doi.org/10.1080/14725886.2025.2512201",
           "filter": 0
         }
       ],
@@ -124,10 +119,11 @@
       "journal_short": "Mod Judaism",
       "articles": [
         {
-          "title": "Eugene Korn, Ethics of Our Fighters—A Jewish View on War and Morality",
-          "authors": "Eugene Korn",
-          "url": "https://doi.org/10.1093/mj/kjaf008",
-          "doi": "https://doi.org/10.1093/mj/kjaf008",
+          "title": "Bandwagon “Activism,” Uncritical Thinking, and the Ostracism of Jews in the Name of Progressive Anti-Zionism",
+          "authors": "Daniel Ian Rubin, Mara Lee Grayson",
+          "abstract": "The October 7, 2023, attack on Israel by Hamas changed the positionality of Jewish progressives in the United States. Left-leaning American Jews were suddenly viewed as politically conservative, right-wing, and even extremist by the same organizations they had supported and advocated for just days earlier. Many progressive activists and organizations, especially on college and university campuses, condemned Israel and shared anti-Zionist messages before Israel had even responded militarily to the massacre. While modern progressivism can be interpreted as critical in both thought and action, the unquestioning allegiance of some American progressives with Hamas and Palestine is rooted in factual inaccuracies, false equivalencies, and rehashed antisemitic stereotypes that have existed for millennia. The progressive left’s refusal to see the Israel–Palestine conflict as anything but a “with us or against us” binary has left American Jews in a state of existential flux. This paper explores the progressives’ reactionary, uncritical stance during the current Israel–Palestine conflict, the place of American Jews in the changing sociopolitical spectrum, and what this means for American Jews and progressive solidarity in the future.",
+          "url": "https://doi.org/10.1093/mj/kjaf009",
+          "doi": "https://doi.org/10.1093/mj/kjaf009",
           "filter": 0
         }
       ],
