@@ -1,22 +1,43 @@
 {
-  "update": "2025-06-20",
+  "update": "2025-06-27",
   "content": [
     {
       "journal_full": "Contemporary Jewry",
       "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Ezra Glinter: Menachem Mendel Schneerson: Becoming the Messiah",
-          "authors": "David Berger",
-          "url": "https://doi.org/10.1007/s12397-025-09656-z",
-          "doi": "https://doi.org/10.1007/s12397-025-09656-z",
+          "title": "Sima Zalcberg Block: They are Still Sitting and Sewing: From the World of Toldot Aharon Hasidic Women",
+          "authors": "Chaim I. Waxman",
+          "url": "https://doi.org/10.1007/s12397-025-09657-y",
+          "doi": "https://doi.org/10.1007/s12397-025-09657-y",
           "filter": 0
-        },
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Jewish Culture and History",
+      "journal_short": "Jewish Cult Hist",
+      "articles": [
         {
-          "title": "Keith Kahn-Harris: Everyday Jews: Why The Jewish People Are Not Who You Think They Are",
-          "authors": "Stuart Schoenfeld",
-          "url": "https://doi.org/10.1007/s12397-025-09653-2",
-          "doi": "https://doi.org/10.1007/s12397-025-09653-2",
+          "title": "A calculated restraint: what the Allied leaders said about the Holocaust",
+          "authors": "Michael Fleming",
+          "url": "https://doi.org/10.1080/1462169x.2025.2521984",
+          "doi": "https://doi.org/10.1080/1462169x.2025.2521984",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Journal of Jewish Education",
+      "journal_short": "J Jewish Ed",
+      "articles": [
+        {
+          "title": "Anti-Israelism, Social Media and the College Campus in the Aftermath of October 7: The Case of Columbia",
+          "authors": "Rebecca Kobrin",
+          "url": "https://doi.org/10.1080/15244113.2025.2496809",
+          "doi": "https://doi.org/10.1080/15244113.2025.2496809",
           "filter": 0
         }
       ],
@@ -27,46 +48,10 @@
       "journal_short": "J Mod Jewish Stud",
       "articles": [
         {
-          "title": "Settler-indigeneity in the West Bank",
-          "authors": "Ran Ukashi",
-          "url": "https://doi.org/10.1080/14725886.2025.2512196",
-          "doi": "https://doi.org/10.1080/14725886.2025.2512196",
-          "filter": 0
-        }
-      ],
-      "articles_hidden": []
-    },
-    {
-      "journal_full": "Modern Judaism",
-      "journal_short": "Mod Judaism",
-      "articles": [
-        {
-          "title": "Jonathan Garb, Does God Doubt? R. Gershon Henoch Leiner’s Thought",
-          "authors": "Leore Sachs-Shmueli",
-          "url": "https://doi.org/10.1093/mj/kjaf011",
-          "doi": "https://doi.org/10.1093/mj/kjaf011",
-          "filter": 0
-        },
-        {
-          "title": "Contributors",
-          "url": "https://doi.org/10.1093/mj/kjaf013",
-          "doi": "https://doi.org/10.1093/mj/kjaf013",
-          "filter": 0
-        },
-        {
-          "title": "The Function of Antisemitism in the Age of Scientific Medicine",
-          "authors": "Sander L Gilman",
-          "abstract": "The shift from a theological to a scientific rationale for modern (post-nineteenth century) antisemitism has long been disputed, with most scholars now stressing the continuity and overlap between both models. Less attention has been paid to the `overt integration of the science of race with clinical medicine, as a basic premise of the rise of scientific thinking during this period. This essay provides exempla for the complexity of such integration on the part of Jewish and non-Jewish clinicians.",
-          "url": "https://doi.org/10.1093/mj/kjaf007",
-          "doi": "https://doi.org/10.1093/mj/kjaf007",
-          "filter": 0
-        },
-        {
-          "title": "Etrog Helps with Pregnancy: The Origin and Development of a Folk Practice",
-          "authors": "Zvi Ron",
-          "abstract": "According to Jewish folklore, the etrog has a special supernatural influence (segula) that aids in having an easy birth. This is accomplished in different traditions by biting the tip of the etrog or eating etrog preserves. Other traditions state that this aids with fertility. This association evolved from the early Ashkenazic practice of distributing pieces of the communal etrog among the community to be eaten on Simchat Torah, with women tasked with biting off part of the etrog first to render it ritually unfit, thus resolving some complicated halakhic issues relating to when an etrog can be eaten. As the practice of etrog distribution began dying out in the eighteenth century, the women biting part of the etrog became reinterpreted as having special curative power for anything related to pregnancy.",
-          "url": "https://doi.org/10.1093/mj/kjaf010",
-          "doi": "https://doi.org/10.1093/mj/kjaf010",
+          "title": "Reading Israeli culture in the aftermath of October 7, 2023",
+          "authors": "Oded Nir",
+          "url": "https://doi.org/10.1080/14725886.2025.2519201",
+          "doi": "https://doi.org/10.1080/14725886.2025.2519201",
           "filter": 0
         }
       ],
