@@ -1,15 +1,36 @@
 {
-  "update": "2025-06-27",
+  "update": "2025-07-04",
   "content": [
     {
       "journal_full": "Contemporary Jewry",
       "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Sima Zalcberg Block: They are Still Sitting and Sewing: From the World of Toldot Aharon Hasidic Women",
-          "authors": "Chaim I. Waxman",
-          "url": "https://doi.org/10.1007/s12397-025-09657-y",
-          "doi": "https://doi.org/10.1007/s12397-025-09657-y",
+          "title": "Rachel Deblinger: Saving Our Survivors: How American Jews Learned about the Holocaust Indiana University Press, 2025, 224 pp.",
+          "authors": "Laurel Leff",
+          "url": "https://doi.org/10.1007/s12397-025-09658-x",
+          "doi": "https://doi.org/10.1007/s12397-025-09658-x",
+          "filter": 0
+        },
+        {
+          "title": "Judit Bokser Liwerant: National and Transnational Paths of Latin American Jews: Modernity, Community, Society, and the State",
+          "authors": "Laura Limonic",
+          "url": "https://doi.org/10.1007/s12397-025-09660-3",
+          "doi": "https://doi.org/10.1007/s12397-025-09660-3",
+          "filter": 0
+        },
+        {
+          "title": "Editors’ Introduction to v45(2)",
+          "authors": "Harriet Hartman, Adina Bankier-Karp",
+          "url": "https://doi.org/10.1007/s12397-025-09664-z",
+          "doi": "https://doi.org/10.1007/s12397-025-09664-z",
+          "filter": 0
+        },
+        {
+          "title": "Original Research Article: The Identity Journey of North American Ultra-Orthodox Women after Aliyah",
+          "authors": "Shaina Silberstein Zvulun, Ifat Maoz",
+          "url": "https://doi.org/10.1007/s12397-025-09651-4",
+          "doi": "https://doi.org/10.1007/s12397-025-09651-4",
           "filter": 0
         }
       ],
@@ -20,24 +41,10 @@
       "journal_short": "Jewish Cult Hist",
       "articles": [
         {
-          "title": "A calculated restraint: what the Allied leaders said about the Holocaust",
-          "authors": "Michael Fleming",
-          "url": "https://doi.org/10.1080/1462169x.2025.2521984",
-          "doi": "https://doi.org/10.1080/1462169x.2025.2521984",
-          "filter": 0
-        }
-      ],
-      "articles_hidden": []
-    },
-    {
-      "journal_full": "Journal of Jewish Education",
-      "journal_short": "J Jewish Ed",
-      "articles": [
-        {
-          "title": "Anti-Israelism, Social Media and the College Campus in the Aftermath of October 7: The Case of Columbia",
-          "authors": "Rebecca Kobrin",
-          "url": "https://doi.org/10.1080/15244113.2025.2496809",
-          "doi": "https://doi.org/10.1080/15244113.2025.2496809",
+          "title": "A Short Life of Torment and Sacrifice: The Letters of Moshe Hoch from the African Detention, 1944–1948",
+          "authors": "Daniela Ozacky Stern",
+          "url": "https://doi.org/10.1080/1462169x.2025.2526977",
+          "doi": "https://doi.org/10.1080/1462169x.2025.2526977",
           "filter": 0
         }
       ],
@@ -48,10 +55,32 @@
       "journal_short": "J Mod Jewish Stud",
       "articles": [
         {
-          "title": "Reading Israeli culture in the aftermath of October 7, 2023",
-          "authors": "Oded Nir",
-          "url": "https://doi.org/10.1080/14725886.2025.2519201",
-          "doi": "https://doi.org/10.1080/14725886.2025.2519201",
+          "title": "What is security?",
+          "authors": "Hizky Shoham",
+          "url": "https://doi.org/10.1080/14725886.2025.2519205",
+          "doi": "https://doi.org/10.1080/14725886.2025.2519205",
+          "filter": 0
+        },
+        {
+          "title": "Judeo-Zo: a Tibeto-Burman Jewish language in the making",
+          "authors": "Dor Shabashewitz",
+          "url": "https://doi.org/10.1080/14725886.2025.2524802",
+          "doi": "https://doi.org/10.1080/14725886.2025.2524802",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Modern Judaism",
+      "journal_short": "Mod Judaism",
+      "articles": [
+        {
+          "title": "Niddah and the (In-)Visibility of Jewish Practice in 19th-Century Central Europe",
+          "authors": "Sarah Wobick-Segev",
+          "abstract": "This article explores the changing discourse on hilkhot niddah in 19th-century German-speaking Europe, where women’s declining observance of these halakhot—especially mikveh use—has been frequently noted. It first surveys key factors in the perceived decline of niddah observance, including secularization and the hygiene movement. It then turns to an underexplored source: prayer books and devotional literature written for, and rarely by, women. Although scholars have extensively analyzed early modern devotional texts for insights into women’s personal and sexual lives, similar 19th-century sources have received little attention. While most of these works omit reference to niddah, seemingly reflecting declining observance, I argue that rather than accepting this at face value, we should analyze rare references to the mikveh and niddah within devotional texts to uncover implicit discussions of the body, health, healing, and family life. These elements provide crucial context for shifting hilkhot niddah practices. To this end, the article examines three prayer books by authors from Habsburg Bohemia and Moravia, illustrating how broader social and ideological shifts, alongside local contexts, shaped each text.",
+          "url": "https://doi.org/10.1093/mj/kjaf012",
+          "doi": "https://doi.org/10.1093/mj/kjaf012",
           "filter": 0
         }
       ],
