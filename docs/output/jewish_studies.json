@@ -1,36 +1,15 @@
 {
-  "update": "2025-07-04",
+  "update": "2025-07-11",
   "content": [
     {
       "journal_full": "Contemporary Jewry",
       "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Rachel Deblinger: Saving Our Survivors: How American Jews Learned about the Holocaust Indiana University Press, 2025, 224 pp.",
-          "authors": "Laurel Leff",
-          "url": "https://doi.org/10.1007/s12397-025-09658-x",
-          "doi": "https://doi.org/10.1007/s12397-025-09658-x",
-          "filter": 0
-        },
-        {
-          "title": "Judit Bokser Liwerant: National and Transnational Paths of Latin American Jews: Modernity, Community, Society, and the State",
-          "authors": "Laura Limonic",
-          "url": "https://doi.org/10.1007/s12397-025-09660-3",
-          "doi": "https://doi.org/10.1007/s12397-025-09660-3",
-          "filter": 0
-        },
-        {
-          "title": "Editors’ Introduction to v45(2)",
-          "authors": "Harriet Hartman, Adina Bankier-Karp",
-          "url": "https://doi.org/10.1007/s12397-025-09664-z",
-          "doi": "https://doi.org/10.1007/s12397-025-09664-z",
-          "filter": 0
-        },
-        {
-          "title": "Original Research Article: The Identity Journey of North American Ultra-Orthodox Women after Aliyah",
-          "authors": "Shaina Silberstein Zvulun, Ifat Maoz",
-          "url": "https://doi.org/10.1007/s12397-025-09651-4",
-          "doi": "https://doi.org/10.1007/s12397-025-09651-4",
+          "title": "Yaacov Yadgar: To Be a Jewish State: Zionism as the New Judaism",
+          "authors": "Ariela Keysar",
+          "url": "https://doi.org/10.1007/s12397-025-09661-2",
+          "doi": "https://doi.org/10.1007/s12397-025-09661-2",
           "filter": 0
         }
       ],
@@ -41,46 +20,79 @@
       "journal_short": "Jewish Cult Hist",
       "articles": [
         {
-          "title": "A Short Life of Torment and Sacrifice: The Letters of Moshe Hoch from the African Detention, 1944–1948",
-          "authors": "Daniela Ozacky Stern",
-          "url": "https://doi.org/10.1080/1462169x.2025.2526977",
-          "doi": "https://doi.org/10.1080/1462169x.2025.2526977",
+          "title": "Son of Mad Men speaks: a reflection on advertising’s creative revolution",
+          "authors": "Alan Levenson",
+          "url": "https://doi.org/10.1080/1462169x.2025.2524282",
+          "doi": "https://doi.org/10.1080/1462169x.2025.2524282",
           "filter": 0
         }
       ],
       "articles_hidden": []
     },
     {
-      "journal_full": "Journal of Modern Jewish Studies",
-      "journal_short": "J Mod Jewish Stud",
+      "journal_full": "Jewish Social Studies",
+      "journal_short": "Jewish Soc Stud",
       "articles": [
         {
-          "title": "What is security?",
-          "authors": "Hizky Shoham",
-          "url": "https://doi.org/10.1080/14725886.2025.2519205",
-          "doi": "https://doi.org/10.1080/14725886.2025.2519205",
+          "title": "Kest: Its History and Significance",
+          "authors": "Shaul Stampfer",
+          "abstract": "Abstract: Kest made early marriage possible for the Ashkenazi Jewish elite and had a significant impact on the role of women where it was practiced. It was standard in Ashkenazi Jewish society for centuries. This was not an accident. It was part of the “toolbox” of a community that developed creative responses to challenges in its environment. This is despite the fact that it was the total opposite to many of the characteristics of ancient Judaism. Nonetheless, it was regarded as one more element of Jewish tradition. Ultimately, it was abandoned, but the tradition of kest, at least in the use of the term, lives on.",
+          "url": "https://doi.org/10.2979/jss.00026",
+          "doi": "https://doi.org/10.2979/jss.00026",
           "filter": 0
         },
         {
-          "title": "Judeo-Zo: a Tibeto-Burman Jewish language in the making",
-          "authors": "Dor Shabashewitz",
-          "url": "https://doi.org/10.1080/14725886.2025.2524802",
-          "doi": "https://doi.org/10.1080/14725886.2025.2524802",
+          "title": "Jewishness Contested: The 1771 Chelsea Murder, Jewish Masculinity, and Jewish Civil Integration",
+          "authors": "Avinoam Yuval-Naeh",
+          "abstract": "Abstract: On June 11, 1771, a group of thieves broke into a private house in Chelsea, a village outside London. The event ended with the killing of one of the servants in addition to the theft itself. Soon enough it became known that the perpetrators were Jewish and the case became a cause célèbre. The perpetrators were apprehended five months later, put on trial, and sentenced to death. The case attracted wide public attention and resonated into the nineteenth century. What made it a catalyst of such broad public agitation? I argue that it became a compelling case because it effectively featured the contradictions that were embedded in the contemporary imagery of the Jew—specifically of the masculine Jew—oscillating between an assimilated gentleman and a perilous criminal who poses a constant threat to the English woman. At the same time, and relatedly, it touched on the borders of Englishness. The question of whether Jews could be part of English civil society became a contested issue in the second half of the eighteenth century, a debate that reflected the uncertainty of the definitions of both Jewishness and English identity. As we shall see, gender and masculinity were hotspots of vulnerability for both concerns, and they figured prominently in depictions of the Chelsea case.",
+          "url": "https://doi.org/10.2979/jss.00022",
+          "doi": "https://doi.org/10.2979/jss.00022",
+          "filter": 0
+        },
+        {
+          "title": "“A Voice that Would Sound All the Notes”: Sound and Regeneration in Vladimir Jabotinsky’s Hebrew Revivalism",
+          "authors": "Itamar Francez",
+          "abstract": "Abstract: The vernacularization of Hebrew speech was an integral component of the Zionist conception of national revival. In this article I explore some of the ways in which the discourse of regeneration and the figure of the “muscle Jew” shaped ideas about the sonic component of Hebrew speech, through the case of study of Vladimir Ze’ev Jabotinsky. I show that Jabotinsky took speech, and Hebrew speech in particular, to be a potent site of regeneration, viewed as the cultivation of corporeal sensitivity to form. I trace his invention of a sonic counterpart to the muscle Jew, and demonstrate how, employing a conception of speech sounds as manifesting qualities of speakers, he constructed an ideological program for regenerative Hebrew speech that challenged the grammatical prescriptions of mainstream revivalists and included observations of and prescriptions about patterns of Hebrew speech down to the level of phonemes and phonological processes.",
+          "url": "https://doi.org/10.2979/jss.00024",
+          "doi": "https://doi.org/10.2979/jss.00024",
+          "filter": 0
+        },
+        {
+          "title": "Ghosts of Oslo: Disjointed Time and Anticipation in the Contemporary Israeli Novel",
+          "authors": "Shira Stav",
+          "abstract": "Abstract: In this article I identify a trend in the mainstream of Israeli literature of the second decade of the twenty-first century, namely, nostalgia for a lost anticipation for the future signaled in the Oslo Accords, signed between Israel and the Palestinians in the early 1990s. I focus on five novels published in the years 2014–15, by some of the most central and successful novelists in Israel, that express the way the Israeli cultural elite is haunted by the specter of the lost future implied in the vision of the Oslo Accords. The novels are: A Horse Walks into a Bar by David Grossman (2014); All the Rivers by Dorit Rabinyan (2014); Judas by Amos Oz (2014); The Extra by A. B. Yehoshua (2014); and The Third by Yishai Sarid (2015). These novels try to relive a lost anticipation for the future by looking back to the past.",
+          "url": "https://doi.org/10.2979/jss.00025",
+          "doi": "https://doi.org/10.2979/jss.00025",
+          "filter": 0
+        },
+        {
+          "title": "The Last of Us, Part 2 and the Christian Limits of “Jewish Representation” in Corporate Art",
+          "authors": "Josh Lambert",
+          "abstract": "Abstract: In this article I present a case study of one of the most massively popular, hugely expensive, and globally influential works of culture ever made, the video game The Last of Us, Part 2 (2020), with particular attention to its creators’ deliberate effort to offer “Jewish representation” to its audiences. I survey contemporary discourse about “Jewish representation” and Jewishness in video games, and attend in detail to the strategies of this particular game’s creators for including Jewish characters and content. Drawing on Adam Y. Stern’s recent “theological-political genealogy” of “survival,” I demonstrate that when a corporation spends hundreds of millions of dollars to produce a cultural product for a global audience, even what that product’s creators earnestly intend as “Jewish representation” can, instead, reflect Christian hegemony.",
+          "url": "https://doi.org/10.2979/jss.00021",
+          "doi": "https://doi.org/10.2979/jss.00021",
+          "filter": 0
+        },
+        {
+          "title": "From the Kheyder to the Ḥeder : A Transformation of the Room",
+          "authors": "Vered Shimshi",
+          "abstract": "Abstract: In this article I argue that the transformation of the ḥeder (the traditional Jewish study room) in modern Hebrew literature from the late-nineteenth to the late-twentieth century reflects a profound shift in Jewish identity, encapsulating the tensions between tradition and modernity. I explore how the ḥeder , once a site of rigorous religious education, evolves into a potent symbol of individual creativity and self-expression in the works of Micha Josef Berdyczewski, Yosef Haim Brenner, Dvora Baron, Hayim Nahman Bialik, and Shmuel Yosef Agnon. By situating this literary transformation within the broader currents of secularization and European modernism, I illuminate how these authors grapple with the dual forces of cultural continuity and change. I conclude with a discussion of Youval Shimoni’s 1999 novel Ḥeder , which suggests that while the ḥeder ’s function has changed, the room continues to serve as a space for introspection and artistic creation in a world that is increasingly uncertain.",
+          "url": "https://doi.org/10.2979/jss.00023",
+          "doi": "https://doi.org/10.2979/jss.00023",
           "filter": 0
         }
       ],
       "articles_hidden": []
     },
     {
-      "journal_full": "Modern Judaism",
-      "journal_short": "Mod Judaism",
+      "journal_full": "Journal of Jewish Education",
+      "journal_short": "J Jewish Ed",
       "articles": [
         {
-          "title": "Niddah and the (In-)Visibility of Jewish Practice in 19th-Century Central Europe",
-          "authors": "Sarah Wobick-Segev",
-          "abstract": "This article explores the changing discourse on hilkhot niddah in 19th-century German-speaking Europe, where women’s declining observance of these halakhot—especially mikveh use—has been frequently noted. It first surveys key factors in the perceived decline of niddah observance, including secularization and the hygiene movement. It then turns to an underexplored source: prayer books and devotional literature written for, and rarely by, women. Although scholars have extensively analyzed early modern devotional texts for insights into women’s personal and sexual lives, similar 19th-century sources have received little attention. While most of these works omit reference to niddah, seemingly reflecting declining observance, I argue that rather than accepting this at face value, we should analyze rare references to the mikveh and niddah within devotional texts to uncover implicit discussions of the body, health, healing, and family life. These elements provide crucial context for shifting hilkhot niddah practices. To this end, the article examines three prayer books by authors from Habsburg Bohemia and Moravia, illustrating how broader social and ideological shifts, alongside local contexts, shaped each text.",
-          "url": "https://doi.org/10.1093/mj/kjaf012",
-          "doi": "https://doi.org/10.1093/mj/kjaf012",
+          "title": "Ethical Leadership in the Face of Antisemitism and Anti-Zionism: University Presidents’ Responses to the October 7 Hamas Attack",
+          "authors": "Julie R. Ancis, Talia B. Gruber",
+          "url": "https://doi.org/10.1080/15244113.2025.2489718",
+          "doi": "https://doi.org/10.1080/15244113.2025.2489718",
           "filter": 0
         }
       ],
