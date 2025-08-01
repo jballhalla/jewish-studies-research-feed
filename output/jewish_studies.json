@@ -1,15 +1,29 @@
 {
-  "update": "2025-07-25",
+  "update": "2025-08-01",
   "content": [
     {
-      "journal_full": "Jewish Culture and History",
-      "journal_short": "Jewish Cult Hist",
+      "journal_full": "Contemporary Jewry",
+      "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "“For Your Old but True Homeland”: Ukrainian-Jewish Relations through the Prism of Goldelman-Bykovsky letters",
-          "authors": "Olga Petrova",
-          "url": "https://doi.org/10.1080/1462169x.2025.2531723",
-          "doi": "https://doi.org/10.1080/1462169x.2025.2531723",
+          "title": "Hannah M. Ridge: Contours of Israeli Politics: Jewish Ethnicity, Religious Nationalism, and Democracy",
+          "authors": "Shmuel Sandler",
+          "url": "https://doi.org/10.1007/s12397-025-09659-w",
+          "doi": "https://doi.org/10.1007/s12397-025-09659-w",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Journal of Modern Jewish Studies",
+      "journal_short": "J Mod Jewish Stud",
+      "articles": [
+        {
+          "title": "The new antisemitism: the resurgence of an ancient hatred in the modern world",
+          "authors": "Graham Wright",
+          "url": "https://doi.org/10.1080/14725886.2025.2534355",
+          "doi": "https://doi.org/10.1080/14725886.2025.2534355",
           "filter": 0
         }
       ],
