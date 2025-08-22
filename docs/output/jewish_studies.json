@@ -1,38 +1,22 @@
 {
-  "update": "2025-08-15",
+  "update": "2025-08-22",
   "content": [
     {
-      "journal_full": "Jewish Culture and History",
-      "journal_short": "Jewish Cult Hist",
+      "journal_full": "Contemporary Jewry",
+      "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Introduction: letters as ego-documents in Jewish history and historiography",
-          "authors": "Charlie Knight, Daniela Ozacky Stern, Haim Sperber",
-          "url": "https://doi.org/10.1080/1462169x.2025.2541140",
-          "doi": "https://doi.org/10.1080/1462169x.2025.2541140",
-          "filter": 0
-        }
-      ],
-      "articles_hidden": []
-    },
-    {
-      "journal_full": "Jewish History",
-      "journal_short": "Jewish Hist",
-      "articles": [
-        {
-          "title": "A Rabbinical Critique of Colonial Space-Time in Algeria",
-          "authors": "Gabriel Abensour",
-          "abstract": "This article examines the Jewish experience in French colonial Algeria through a 1934 text by Rabbi Yosef Messas. Written during his tenure in Tlemcen, the text offers a rare, first-hand account of how colonial structures disrupted the temporal and spatial fabric of traditional Maghrebi Jewish life. Additionally, the paper delves into the convergences and divergences between the experiences of Muslims and Jews under French colonialism. Through Messas’s text, this paper contributes to reshaping narratives surrounding native Jews’ interactions with colonial policies, fostering a deeper understanding of colonialism’s intricate effects. It also identifies instances where sociological minority groups, such as Jews and women, intersect. Ultimately, the paper portrays Algerian Jews as both colonized and peripheral within the society shaped by colonial forces, a status shaped by distinct colonial encounters and varying social positions.",
-          "url": "https://doi.org/10.1007/s10835-025-09473-9",
-          "doi": "https://doi.org/10.1007/s10835-025-09473-9",
+          "title": "Simon Rabinovitch: Sovereignty &amp; Religious Freedom: A Jewish History",
+          "authors": "Lauren B. Strauss",
+          "url": "https://doi.org/10.1007/s12397-025-09666-x",
+          "doi": "https://doi.org/10.1007/s12397-025-09666-x",
           "filter": 0
         },
         {
-          "title": "Out of Sight and Out of Sync: Space and Time in Israeli Immigrant Transit Camps",
-          "authors": "Hila Shalem Baharad",
-          "abstract": "Space and time played a crucial role in the social and cultural integration of immigrants living in Israeli transit camps during the 1950s. Over the course of three and a half years, approximately 720,000 immigrants from sixteen countries arrived in Israel. Lacking other options, one-third of them were housed in government-run transit camps, which created a barrier between them and the majority of immigrants who were able to assimilate independently throughout Israel, as well as between transit camp residents and society at large. Based on analysis of archival sources and oral documentation, this article provides insight into the daily lives of transit camp residents, focusing on the key dimensions of space and time. Regarding space, the camps became heterotopic spaces, isolated and separate from their surroundings. With regard to time, daily life within the transit camps operated on a different internal rhythm than the broader process of Israeli nation-building. Additionally, the article touches upon the routine of waiting, the significance of garden spaces within the transit camps, and the disconnect from social and political events outside of the camps.",
-          "url": "https://doi.org/10.1007/s10835-025-09474-8",
-          "doi": "https://doi.org/10.1007/s10835-025-09474-8",
+          "title": "Rabbi Sternbuch’s Tenure in South Africa and His Treatment of Problems Involving Interracial Realities",
+          "authors": "David Kapach",
+          "url": "https://doi.org/10.1007/s12397-025-09665-y",
+          "doi": "https://doi.org/10.1007/s12397-025-09665-y",
           "filter": 0
         }
       ],
@@ -43,10 +27,24 @@
       "journal_short": "J Jewish Ed",
       "articles": [
         {
-          "title": "Living with the Dissonance and the Ethics of Multiple Truths: American Jews in Israel/Palestine",
-          "authors": "Ella Ben Hagai, Cassandra Reid, Sebastian Lopez-Padilla",
-          "url": "https://doi.org/10.1080/15244113.2025.2540876",
-          "doi": "https://doi.org/10.1080/15244113.2025.2540876",
+          "title": "Communicating Spirituality: Understanding Prayer and Study Experiences of Those with Cognitive Disabilities Using Natural Language Processing",
+          "authors": "Eli Kohn, Mor Saban, Yaniv Alon, Ariel Levin",
+          "url": "https://doi.org/10.1080/15244113.2025.2538683",
+          "doi": "https://doi.org/10.1080/15244113.2025.2538683",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Journal of Modern Jewish Studies",
+      "journal_short": "J Mod Jewish Stud",
+      "articles": [
+        {
+          "title": "Animal rights and the Hebrew Bible",
+          "authors": "Beth Berkowitz",
+          "url": "https://doi.org/10.1080/14725886.2025.2545787",
+          "doi": "https://doi.org/10.1080/14725886.2025.2545787",
           "filter": 0
         }
       ],
