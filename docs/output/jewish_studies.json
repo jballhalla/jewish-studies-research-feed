@@ -1,22 +1,52 @@
 {
-  "update": "2025-08-22",
+  "update": "2025-08-29",
   "content": [
     {
       "journal_full": "Contemporary Jewry",
       "journal_short": "Contemp Jewry",
       "articles": [
         {
-          "title": "Simon Rabinovitch: Sovereignty &amp; Religious Freedom: A Jewish History",
-          "authors": "Lauren B. Strauss",
-          "url": "https://doi.org/10.1007/s12397-025-09666-x",
-          "doi": "https://doi.org/10.1007/s12397-025-09666-x",
+          "title": "BOOK REVIEW: Marc B. Shapiro: Renewing the Old, Sanctifying the New: The Unique Vision of Rav Kook",
+          "authors": "Adam S. Ferziger",
+          "url": "https://doi.org/10.1007/s12397-025-09668-9",
+          "doi": "https://doi.org/10.1007/s12397-025-09668-9",
           "filter": 0
         },
         {
-          "title": "Rabbi Sternbuch’s Tenure in South Africa and His Treatment of Problems Involving Interracial Realities",
-          "authors": "David Kapach",
-          "url": "https://doi.org/10.1007/s12397-025-09665-y",
-          "doi": "https://doi.org/10.1007/s12397-025-09665-y",
+          "title": "Book Review: Dan Stone: The Holocaust: An Unfinished History",
+          "authors": "Amy Simon",
+          "url": "https://doi.org/10.1007/s12397-025-09671-0",
+          "doi": "https://doi.org/10.1007/s12397-025-09671-0",
+          "filter": 0
+        },
+        {
+          "title": "Book Review: Dov Schwartz: “The Soul Seeks Its Melodies:” Music in Jewish Thought",
+          "authors": "Reviewed by Mark Kligman",
+          "url": "https://doi.org/10.1007/s12397-025-09673-y",
+          "doi": "https://doi.org/10.1007/s12397-025-09673-y",
+          "filter": 0
+        }
+      ],
+      "articles_hidden": []
+    },
+    {
+      "journal_full": "Jewish History",
+      "journal_short": "Jewish Hist",
+      "articles": [
+        {
+          "title": "Sense of Place and Aging in the Local-Oral Histories of Veteran Uneducated Mizrahi Women from Beersheva",
+          "authors": "Yael Zilberman-Friedmann",
+          "abstract": "This article examines the sense of place among elderly, uneducated Mizrahi women in the southern Israeli city of Beersheva. Through a literary-cultural analysis of these women’s oral histories, it explores the rhetorical and poetic characteristics of their discourse on their sense of place. It is important to note that documenting women’s oral histories is of great significance to feminist research, as the perspectives of women—especially those who are uneducated—are often absent from archives and insufficiently represented in historical research. In this context, feminist oral history seeks to prioritize women’s personal and everyday experiences in research on places.",
+          "url": "https://doi.org/10.1007/s10835-025-09478-4",
+          "doi": "https://doi.org/10.1007/s10835-025-09478-4",
+          "filter": 0
+        },
+        {
+          "title": "The Seleucid Era and Rhythms of Time Consciousness in Modern Jewish Yemen",
+          "authors": "Menashe Anzi",
+          "abstract": "The Seleucid era was the first to introduce continuous counting of years, a system adopted by many societies for over a millenium. Its usage gradually declined during the Middle Ages and early modern period, and today it is preserved only by a small group of Yemenite Jews for religious purposes. This article explores the preservation of this calendar within the Jewish community of Yemen, where it was referred to as the “Era of Contracts” ( Minyan ha-Shetarot ). It also examines how the Seleucid era’s status diminished even in Yemen, particularly in the twentieth century, when a significant portion of Yemenite Jews emigrated—primarily to Palestine and other countries—where the use of the “Era of Creation of the World” (Anno Mundi) prevailed. Drawing on hundreds of documents from the sixteenth to the twentieth centuries, this study reveals a gradual process of change over time and the sophisticated use of multiple time systems. The analysis offers a deeper understanding of the layered time consciousness of Yemenite Jews in the modern era.",
+          "url": "https://doi.org/10.1007/s10835-025-09475-7",
+          "doi": "https://doi.org/10.1007/s10835-025-09475-7",
           "filter": 0
         }
       ],
@@ -27,10 +57,17 @@
       "journal_short": "J Jewish Ed",
       "articles": [
         {
-          "title": "Communicating Spirituality: Understanding Prayer and Study Experiences of Those with Cognitive Disabilities Using Natural Language Processing",
-          "authors": "Eli Kohn, Mor Saban, Yaniv Alon, Ariel Levin",
-          "url": "https://doi.org/10.1080/15244113.2025.2538683",
-          "doi": "https://doi.org/10.1080/15244113.2025.2538683",
+          "title": "Incorporating Jews and Antisemitism Into Diversity, Equity, and Inclusion Programming at a Big Ten University: A Practitioners’ Self-Study",
+          "authors": "Yael Aronoff, Kirsten Fermaglich, Amy Simon",
+          "url": "https://doi.org/10.1080/15244113.2025.2538894",
+          "doi": "https://doi.org/10.1080/15244113.2025.2538894",
+          "filter": 0
+        },
+        {
+          "title": "Discussing the Other: Palestinian Stories and History at Jewish Summer Camps after October 7",
+          "authors": "Matt Reingold",
+          "url": "https://doi.org/10.1080/15244113.2025.2549705",
+          "doi": "https://doi.org/10.1080/15244113.2025.2549705",
           "filter": 0
         }
       ],
@@ -41,10 +78,17 @@
       "journal_short": "J Mod Jewish Stud",
       "articles": [
         {
-          "title": "Animal rights and the Hebrew Bible",
-          "authors": "Beth Berkowitz",
-          "url": "https://doi.org/10.1080/14725886.2025.2545787",
-          "doi": "https://doi.org/10.1080/14725886.2025.2545787",
+          "title": "Revisiting fear in Zionism: pogroms and the emergence of “Jewish fear” as a problem in Zionist discourse",
+          "authors": "Yair Berlin",
+          "url": "https://doi.org/10.1080/14725886.2025.2545789",
+          "doi": "https://doi.org/10.1080/14725886.2025.2545789",
+          "filter": 0
+        },
+        {
+          "title": "The people, the Torah, the God: a neo-traditional Jewish theology",
+          "authors": "Dr. Nadav S. Berman",
+          "url": "https://doi.org/10.1080/14725886.2025.2545781",
+          "doi": "https://doi.org/10.1080/14725886.2025.2545781",
           "filter": 0
         }
       ],
