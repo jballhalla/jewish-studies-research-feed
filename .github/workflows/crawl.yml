@@ -18,6 +18,8 @@ jobs:
           packages: |
             any::httr 
             any::jsonlite
+            any::xml2
+            any::lubridate
 
       - name: Check out repository
         uses: actions/checkout@v4
@@ -29,9 +31,11 @@ jobs:
         working-directory: ./main_folder
         run: |
           echo 'crossref_email="'"$MAPPED_CROSSREF_EMAIL"'"' >> credentials.R
+          echo 'openai_apikey="'"$MAPPED_OPENAI_APIKEY"'"' >> credentials.R
         shell: bash
         env:
           MAPPED_CROSSREF_EMAIL : ${{ secrets.CROSSREF_EMAIL }}
+          MAPPED_OPENAI_APIKEY : ${{ secrets.OPENAI_APIKEY }}
 
       - name: Get data and produce JSON
         working-directory: ./main_folder
