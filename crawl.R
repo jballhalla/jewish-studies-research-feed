@@ -60,6 +60,64 @@ if(field %in% c("multidisciplinary", "environmental_and_climate_politics_studies
     rownames(out) <- NULL
     } 
 
+# Load news articles and combine with academic articles
+news_file <- "./memory/jewish_news.csv"
+combined_articles <- list()
+
+if (file.exists(news_file)) {
+  news_data <- read.csv(news_file, stringsAsFactors = FALSE)
+  news_data$date_scraped <- as.Date(news_data$date_scraped)
+  
+  # Only include articles from the last 7 days
+  recent_news <- news_data[news_data$date_scraped >= (Sys.Date() - 7), ]
+  
+  if (nrow(recent_news) > 0) {
+    # Prepare news articles for AI ranking
+    news_for_ai <- data.frame(
+      type = "news",
+      title = recent_news$title,
+      description = recent_news$description,
+      url = recent_news$link,
+      source = recent_news$source,
+      stringsAsFactors = FALSE
+    )
+    
+    combined_articles[["news"]] <- news_for_ai
+  }
+}
+
+# Prepare academic articles for AI ranking
+if (nrow(out) > 0) {
+  academic_for_ai <- data.frame(
+    type = "academic",
+    title = out$title,
+    description = ifelse(is.na(out$abstract) | out$abstract == "", 
+                        paste("Academic article from", out$journal_full), 
+                        out$abstract),
+    url = out$url,
+    source = out$journal_full,
+    stringsAsFactors = FALSE
+  )
+  
+  combined_articles[["academic"]] <- academic_for_ai
+}
+
+# If we have articles, use OpenAI to rank them
+if (length(combined_articles) > 0) {
+  all_for_ranking <- do.call(rbind, combined_articles)
+  
+  if (nrow(all_for_ranking) > 0) {
+    source("./functions/openai_ranking.R")
+    ranked_articles <- rank_articles_with_openai(all_for_ranking)
+    
+    # Filter original academic articles based on OpenAI ranking
+    if (!is.null(ranked_articles)) {
+      top_academic_urls <- ranked_articles[ranked_articles$type == "academic", "url"]
+      out <- out[out$url %in% top_academic_urls, ]
+    }
+  }
+}
+
 # Output JSON
 out_json <- render_json(out, date=as.Date(now)) 
 write(out_json, paste0("./output/", field, ".json"))
