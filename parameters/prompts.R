@@ -1,1 +1,0 @@
-prompt_socsci_classifier <- "You are given a content from a new issue of a multidisciplinary scientific journal. Respond 'Yes' if the content is a research article in any social science discipline and 'No' otherwise."
